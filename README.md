@@ -1,2 +1,2 @@
-# dithmaa.github.io
-My own portfolio
+# Александр Холод
+Мой первый сайт
