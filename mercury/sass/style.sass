@@ -1,0 +1,188 @@
+@import "vars"
+html
+    overflow-x: hidden
+body
+    font-family: $roboto-font
+    height: 4000px
+    margin: 0
+    line-height: 1.75
+ul
+    padding: 0
+    margin: 0
+header
+    height: 95vh
+    background-size: cover
+.container 
+    width: 1400px
+    max-width: 80%
+    margin: 0 auto
+.home
+    text-align: center
+    &-img
+        width: 700px
+        margin: 0 auto
+        margin-top: 100px
+        box-shadow: 0 0 40px rgba(#fff,.1)
+        img 
+            width: 100%
+    &-button
+        border-radius: 24px
+        background-color: #5584ff
+        color: #ffffff
+        letter-spacing: 0.24px
+        padding: 10px 55px
+        text-decoration: none
+        font-weight: 500
+        display: inline-block
+        transition: all .25s ease
+        &:hover
+            background-color: darken(#5584ff, 5%)
+    .h1 
+        color: white
+        font-size: 54px
+        font-weight: 100
+        padding-top: 50px
+        line-height: 1.2
+        span
+            font-size: 30px
+            color: #8492af
+            display: block
+            font-weight: 500
+            padding-top: 5px
+.top-hamburger
+    display: none
+.top-nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 130px
+    max-width: 85%
+    width: 1690px
+    margin: 0 auto
+    .hamburger
+        width: 30px
+        height: 30px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        &-inner
+            width: 90%
+            height: 2px
+            background: white
+            display: inline-block
+    .logo 
+        width: 200px
+        img 
+            width: 100%
+    .menu
+        display: flex
+        list-style: none
+        li
+            padding-right: 50px
+            &:last-child
+                padding-right: 0
+                a 
+                    &:hover
+                        opacity: 1
+
+        a 
+            color: #ffffff
+            letter-spacing: 0.24px
+            text-decoration: none
+            transition: all .25s ease
+            &:hover 
+                opacity: 0.6
+        a.button
+            color: #5584ff
+            padding: 13px 43px
+            border: 1px solid rgba(85, 132, 255, 0.3)
+            border-radius: 100px
+            transition: all .25s ease
+            &:hover
+                background-color: rgba(85, 132, 255, 1)
+                color: white
+.slick-slide 
+    margin: 0 60px
+.features-arrow
+    border: none
+    background-color: transparent 
+    width: 25px
+    height: 30px
+    background:  no-repeat center center
+    background-size: cover
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+.features-prev
+    background-image: url('../img/features/left-arrow.svg')
+    left: -60px
+.features-next
+    background-image: url('../img/features/right-arrow.svg')
+    right: -60px
+.features
+    position: relative
+    display: flex
+    margin-top: 240px
+    justify-content: space-between
+    &-item
+        text-align: center
+        p 
+            color: #8492af
+    &--button
+        text-decoration: none
+        font-weight: 700
+        color: #0e1a35
+        border-radius: 24px
+        border: 1px solid rgba(132, 146, 175, 0.3)
+        padding: 10px 85px
+        margin-top: 12px
+        display: inline-block
+        transition:  all .25s ease
+        &:hover
+            border: 1px solid rgba(132, 146, 175, 0.6)
+    &--title 
+        color: #0e1a35
+        font-size: 20px
+    &--icon
+        width: 60px
+        margin: 0 auto
+        img 
+            width: 100%
+
+.browser
+    margin: 220px 0 120px 
+    background: no-repeat
+    background-position-x: 125%
+    background-size: contain
+    background-position-y: center
+    padding: 70px 0
+    .h1
+        font-size: 60px
+        font-weight: 300
+        line-height: 1.2
+        margin-bottom: 30px
+    p
+        color: #8492af
+        font-size: 18px
+        width: 45%
+    &-feat
+        padding: 12px 0
+        color: #5584ff
+        position: relative
+        padding-left: 40px
+        font-size: 20px
+        &::before 
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            margin: auto
+            left: 0
+            width: 28px
+            height: 28px
+            background: center center no-repeat 
+            background-size: cover
+            background-image: url('../img/browser/agree.png')
+
+@import "media"
