@@ -43,6 +43,8 @@
                 display: none
                 &:last-child
                    display: block
+        .logo 
+            height: 56px
     .top-hamburger
         display: block
     //home
@@ -70,10 +72,16 @@
         width: 15px
         height: 20px
 @media (max-width: 569px)
+    .header
+        height: 550px
+    .top-nav
+        .logo
+            width: 150px
     .home 
         .h1 
+            font-size: 30px
             span 
-                font-size: 20px
+                font-size: 16px
     .features
         &-item
             p 
@@ -85,9 +93,12 @@
             width: 100%
             font-size: 14px
         &-feat 
-            font-size: 10px
+            font-size: 14px
+            &::before 
+                width: 20px
+                height: 20px
     .features
-        margin-top: 50%
+        margin-top: 40%
         &--button
             padding: 10px 54px
     .top-nav
@@ -96,5 +107,9 @@
     .top-hamburger
         order: 1
     .home
+        &-button
+            font-size: 15px
+            padding: 4px 32px
         &-img
             width: 95%
+            margin-top: 60px
