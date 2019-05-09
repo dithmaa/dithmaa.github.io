@@ -294,6 +294,159 @@ header {
   background-image: url("../img/browser/agree.png");
 }
 
+.drop {
+  width: 390px;
+  height: 100px;
+  border: 1.5px dashed #344364;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+.dragdrop {
+  padding: 160px 5% 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dragdrop-slider {
+  position: relative;
+}
+
+.dragdrop-arrow {
+  position: absolute;
+  bottom: -70px;
+  border: none;
+  background-color: transparent;
+  left: 54px;
+}
+
+.dragdrop-next {
+  margin-left: 54px;
+}
+
+.dragdrop--progres {
+  margin-right: 48px;
+}
+
+.dragdrop .hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #8492af;
+  font-size: 20px;
+}
+
+.dragdrop .task {
+  color: #000000;
+  z-index: 1;
+  position: relative;
+  width: 390px;
+  max-width: 100%;
+  background-color: #ffffff;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.dragdrop .task:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.dragdrop .task-title {
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.dragdrop .task-left {
+  color: #999999;
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+}
+
+.dragdrop .task-icon {
+  margin-right: 23px;
+  margin-left: 30px;
+  color: #fff;
+  background-color: #5584ff;
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.dragdrop-slider {
+  width: 38%;
+}
+
+.dragdrop-slider .h2 {
+  font-size: 60px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.dragdrop-slider p {
+  font-size: 18px;
+  color: #8492af;
+}
+
+.dragdrop-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dragdrop-area .h3 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.dragdrop-area .h3 span {
+  color: #8492af;
+}
+
+.invisible {
+  display: none;
+}
+
+.hovered {
+  border-color: #546997;
+}
+
+.hold {
+  border: 2px #ccc 4px;
+}
+
 @media (max-width: 1700px) {
   .browser {
     background-position-x: 150%;
@@ -312,6 +465,22 @@ header {
 @media (max-width: 1440px) {
   .browser {
     background-position-x: 290%;
+  }
+  .dragdrop {
+    padding: 56px 5% 90px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dragdrop-slider {
+    width: 70%;
+    margin-bottom: 80px;
+  }
+  .dragdrop-area {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -340,6 +509,46 @@ header {
 }
 
 @media (max-width: 992px) {
+  .drop {
+    max-width: 84%;
+  }
+  .dragdrop {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .dragdrop--progres {
+    margin: 0;
+  }
+  .dragdrop-area {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .area {
+    width: 50%;
+  }
+  .drop {
+    margin-bottom: 32px;
+  }
+  .dragdrop .task {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .dragdrop .task-icon {
+    margin: 0;
+    margin-bottom: 5px;
+  }
   .browser {
     background-image: none !important;
     padding: 10px 0;
@@ -397,6 +606,36 @@ header {
 }
 
 @media (max-width: 569px) {
+  .dragdrop {
+    padding: 23px 2% 58px;
+  }
+  .dragdrop-arrow {
+    left: 0;
+  }
+  .dragdrop-slider {
+    width: 100%;
+  }
+  .dragdrop-slider .h2 {
+    font-size: 40px;
+  }
+  .dragdrop-slider p {
+    font-size: 16px;
+  }
+  .dragdrop-area {
+    display: none;
+  }
+  .features-arrow {
+    opacity: 0.3;
+  }
+  .features-prev {
+    left: -10px;
+  }
+  .features-next {
+    right: -10px;
+  }
+  .container {
+    max-width: 90%;
+  }
   .header {
     height: 550px;
   }

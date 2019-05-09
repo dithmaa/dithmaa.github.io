@@ -10,6 +10,16 @@
 @media (max-width: 1440px)
     .browser 
         background-position-x: 290%
+
+    .dragdrop
+        padding: 56px 5% 90px
+        flex-direction: column
+        &-slider 
+            width: 70%
+            margin-bottom: 80px
+        &-area
+            order: 1
+
 @media (max-width: 1360px)
     .browser 
         background-position-x: 170%
@@ -28,7 +38,34 @@
 
     .slick-slide 
         margin: 0 10px
-@media (max-width: 992px)
+@media (max-width: 992px)   
+    .drop 
+        max-width: 84%
+    .dragdrop
+        padding-left: 2%
+        padding-right: 2%
+        &--progres
+            margin: 0
+        &-area 
+            width: 100%
+            display: flex
+            justify-content: space-between
+    .area 
+        width: 50%
+    .drop 
+        margin-bottom: 32px
+    .dragdrop 
+        .task 
+            width: 100%
+            flex-direction: column
+            padding: 15px
+            align-items: flex-start
+            &-icon 
+                margin: 0
+                margin-bottom: 5px
+    
+
+            
     .browser 
         background-image: none!important
         padding: 10px 0
@@ -72,6 +109,26 @@
         width: 15px
         height: 20px
 @media (max-width: 569px)
+    .dragdrop
+        padding: 23px 2% 58px
+        &-arrow 
+            left: 0
+        &-slider 
+            width: 100%
+            .h2 
+                font-size: 40px
+            p 
+                font-size: 16px
+        &-area 
+            display: none
+    .features-arrow
+        opacity: 0.3
+    .features-prev
+        left: -10px
+    .features-next
+        right: -10px
+    .container
+        max-width: 90%
     .header
         height: 550px
     .top-nav
