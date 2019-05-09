@@ -447,6 +447,100 @@ header {
   border: 2px #ccc 4px;
 }
 
+.powerfull {
+  text-align: center;
+  background-color: #f6f7fa;
+  padding: 100px 0 172px;
+}
+
+.powerfull .container {
+  position: relative;
+}
+
+.powerfull .h2 {
+  font-size: 60px;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 300;
+}
+
+.powerfull p {
+  font-size: 18px;
+  color: #8492af;
+}
+
+.powerfull .screen {
+  width: 1118px;
+  height: 581px;
+  background: url("../img/powerfull/screen.png") center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-top: 60px;
+}
+
+.powerfull .description {
+  text-align: left;
+  position: absolute;
+  width: 644px;
+}
+
+.powerfull .description-first {
+  top: 280px;
+  left: 0;
+}
+
+.powerfull .description-first::before {
+  left: 0;
+}
+
+.powerfull .description-second {
+  text-align: right;
+  right: 0;
+  top: 560px;
+}
+
+.powerfull .description-second::after {
+  left: 0;
+}
+
+.powerfull .description-second::before {
+  right: 0;
+}
+
+.powerfull .description::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  margin-top: 28px;
+  width: 30px;
+  height: 30px;
+  background-color: #5584ff;
+  border-radius: 50%;
+  border: 7px solid rgba(153, 204, 255, 0.6);
+  opacity: 0.8;
+}
+
+.powerfull .description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  margin-top: 48px;
+  width: 607px;
+  height: 2px;
+  background-color: #5584ff;
+}
+
+.powerfull .description .h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.powerfull .description p {
+  color: #8492af;
+}
+
 @media (max-width: 1700px) {
   .browser {
     background-position-x: 150%;
@@ -459,6 +553,12 @@ header {
   }
   .browser {
     background-position-x: 170%;
+  }
+  .powerfull .description {
+    width: 544px;
+  }
+  .powerfull .description::before {
+    width: 507px;
   }
 }
 
@@ -490,6 +590,22 @@ header {
     background-size: 70%;
     margin: 80px 0 114px;
   }
+  .powerfull .screen {
+    width: 818px;
+    height: 381px;
+  }
+  .powerfull .description {
+    width: 494px;
+  }
+  .powerfull .description-first {
+    top: 230px;
+  }
+  .powerfull .description-second {
+    top: 400px;
+  }
+  .powerfull .description::before {
+    width: 457px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -506,9 +622,43 @@ header {
   .slick-slide {
     margin: 0 10px;
   }
+  .powerfull .screen {
+    width: 718px;
+    height: 381px;
+  }
+  .powerfull .description {
+    width: 404px;
+  }
+  .powerfull .description::before {
+    width: 91%;
+  }
+  .powerfull .description-second {
+    top: 450px;
+  }
+  .powerfull .description .h3 {
+    font-size: 20px;
+  }
+  .powerfull .description p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 992px) {
+  .powerfull .description {
+    width: 304px;
+  }
+  .powerfull .description-second {
+    top: 470px;
+  }
+  .powerfull .description::before {
+    width: 88%;
+  }
+  .powerfull .h2 {
+    font-size: 50px;
+  }
+  .powerfull p {
+    font-size: 16px;
+  }
   .drop {
     max-width: 84%;
   }
@@ -584,6 +734,20 @@ header {
 }
 
 @media (max-width: 768px) {
+  .powerfull {
+    padding: 54px 0 94px;
+  }
+  .powerfull .h2 {
+    font-size: 35px;
+  }
+  .powerfull p {
+    font-size: 14px;
+  }
+  .powerfull .screen {
+    width: 458px;
+    height: 321px;
+    background-size: contain;
+  }
   .browser .h1 {
     font-size: 50px;
   }
@@ -606,6 +770,20 @@ header {
 }
 
 @media (max-width: 569px) {
+  .powerfull .h2 {
+    font-size: 30px;
+  }
+  .powerfull .description::before, .powerfull .description::after {
+    display: none;
+  }
+  .powerfull .description-second {
+    top: 500px;
+  }
+  .powerfull .screen {
+    margin-top: 205px;
+    width: 100%;
+    height: 150px;
+  }
   .dragdrop {
     padding: 23px 2% 58px;
   }
@@ -686,6 +864,18 @@ header {
   .home-img {
     width: 95%;
     margin-top: 60px;
+  }
+}
+
+@media (max-width: 471px) {
+  .powerfull .screen {
+    margin-top: 70%;
+  }
+  .powerfull .description-first {
+    top: 300px;
+  }
+  .powerfull .description-second {
+    top: 645px;
   }
 }
 /*# sourceMappingURL=style.css.map */

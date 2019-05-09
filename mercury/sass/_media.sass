@@ -7,6 +7,11 @@
         margin: 0 30px
     .browser 
         background-position-x: 170%
+    .powerfull 
+        .description
+            width: 544px
+            &::before //line
+                width: 507px
 @media (max-width: 1440px)
     .browser 
         background-position-x: 290%
@@ -25,7 +30,18 @@
         background-position-x: 170%
         background-size: 70%
         margin: 80px 0 114px
-
+    .powerfull 
+        .screen 
+            width: 818px
+            height: 381px
+        .description
+            width: 494px
+            &-first 
+                top: 230px
+            &-second 
+                top: 400px
+            &::before //line
+                width: 457px
 @media (max-width: 1200px)
     .browser
         background-position-y: 100%
@@ -38,7 +54,32 @@
 
     .slick-slide 
         margin: 0 10px
+    .powerfull
+        .screen 
+            width: 718px
+            height: 381px
+        .description
+            width: 404px
+            &::before //line
+                width: 91%
+            &-second 
+                top: 450px
+            .h3 
+                font-size: 20px 
+            p 
+                font-size: 16px
 @media (max-width: 992px)   
+    .powerfull 
+        .description 
+            width: 304px
+            &-second
+                top: 470px
+            &::before 
+                width: 88%
+        .h2 
+            font-size: 50px
+        p 
+            font-size: 16px
     .drop 
         max-width: 84%
     .dragdrop
@@ -93,6 +134,16 @@
             span
                 font-size: 25px 
 @media (max-width: 768px)
+    .powerfull 
+        padding: 54px 0 94px
+        .h2
+            font-size: 35px
+        p 
+            font-size: 14px
+        .screen 
+            width: 458px
+            height: 321px
+            background-size: contain
     .browser 
         .h1
             font-size: 50px
@@ -109,6 +160,18 @@
         width: 15px
         height: 20px
 @media (max-width: 569px)
+    .powerfull 
+        .h2
+            font-size: 30px
+        .description 
+            &::before, &::after 
+                display: none
+            &-second 
+                top: 500px
+        .screen 
+            margin-top: 205px
+            width: 100%
+            height: 150px
     .dragdrop
         padding: 23px 2% 58px
         &-arrow 
@@ -170,3 +233,12 @@
         &-img
             width: 95%
             margin-top: 60px
+@media (max-width: 471px)
+    .powerfull
+        .screen 
+            margin-top: 70%
+        .description 
+            &-first
+              top: 300px  
+            &-second 
+                top: 645px
