@@ -29,8 +29,8 @@ $('.dragdrop-slider').slick({
   speed: 600,
   slideToShow: 1,
   slideToScroll: 1,
-  prevArrow: '<button type="button" class="dragdrop-prev dragdrop-arrow"><img alt="prev" src="../img/dragdrop/prev.png"></button>',
-  nextArrow: '<button type="button" class="dragdrop-next dragdrop-arrow"><img alt="next" src="../img/dragdrop/next.png"></button>'
+  prevArrow: '<button type="button" class="dragdrop-prev dragdrop-arrow"><img alt="prev" src="img/dragdrop/prev.png"></button>',
+  nextArrow: '<button type="button" class="dragdrop-next dragdrop-arrow"><img alt="next" src="img/dragdrop/next.png"></button>'
 });
 //drag'n drop
 const fill = document.querySelector('.task');
