@@ -134,6 +134,8 @@
             span
                 font-size: 25px 
 @media (max-width: 768px)
+    .container 
+        max-width: 95%
     .powerfull 
         padding: 54px 0 94px
         .h2
@@ -143,6 +145,7 @@
         .screen 
             width: 458px
             height: 321px
+            margin-top: 107px
             background-size: contain
     .browser 
         .h1
@@ -160,18 +163,18 @@
         width: 15px
         height: 20px
 @media (max-width: 569px)
-    .powerfull 
+    .powerfull
         .h2
             font-size: 30px
-        .description 
-            &::before, &::after 
-                display: none
-            &-second 
-                top: 500px
         .screen 
-            margin-top: 205px
-            width: 100%
-            height: 150px
+            margin-top: 140px
+            width: 385px
+            height: 221px
+            .description
+                &::after 
+                    display: none
+            &::before 
+                width: 80%
     .dragdrop
         padding: 23px 2% 58px
         &-arrow 
@@ -233,12 +236,31 @@
         &-img
             width: 95%
             margin-top: 60px
-@media (max-width: 471px)
+@media (max-width: 498px)
     .powerfull
+        padding: 54px 0 405px
+        .h1 
+            font-size: 25px
         .screen 
-            margin-top: 70%
-        .description 
-            &-first
-              top: 300px  
+            display: none
+        .description
+            text-align: center
+            width: 100%
+            &-first 
+                top: 213px
+            &::after 
+                display: none
+            &::before 
+                display: none
             &-second 
-                top: 645px
+                left: 0
+                top: 376px
+                &::before 
+                    left: 0 
+@media (max-width: 391px)
+    .powerfull
+        .description
+            &-first 
+                top: 270px
+            &-second 
+                top: 420px

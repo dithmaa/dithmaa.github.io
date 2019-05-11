@@ -734,6 +734,9 @@ header {
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+  }
   .powerfull {
     padding: 54px 0 94px;
   }
@@ -746,6 +749,7 @@ header {
   .powerfull .screen {
     width: 458px;
     height: 321px;
+    margin-top: 107px;
     background-size: contain;
   }
   .browser .h1 {
@@ -773,16 +777,16 @@ header {
   .powerfull .h2 {
     font-size: 30px;
   }
-  .powerfull .description::before, .powerfull .description::after {
+  .powerfull .screen {
+    margin-top: 140px;
+    width: 385px;
+    height: 221px;
+  }
+  .powerfull .screen .description::after {
     display: none;
   }
-  .powerfull .description-second {
-    top: 500px;
-  }
-  .powerfull .screen {
-    margin-top: 205px;
-    width: 100%;
-    height: 150px;
+  .powerfull .screen::before {
+    width: 80%;
   }
   .dragdrop {
     padding: 23px 2% 58px;
@@ -867,15 +871,44 @@ header {
   }
 }
 
-@media (max-width: 471px) {
+@media (max-width: 498px) {
+  .powerfull {
+    padding: 54px 0 405px;
+  }
+  .powerfull .h1 {
+    font-size: 25px;
+  }
   .powerfull .screen {
-    margin-top: 70%;
+    display: none;
+  }
+  .powerfull .description {
+    text-align: center;
+    width: 100%;
   }
   .powerfull .description-first {
-    top: 300px;
+    top: 213px;
+  }
+  .powerfull .description::after {
+    display: none;
+  }
+  .powerfull .description::before {
+    display: none;
   }
   .powerfull .description-second {
-    top: 645px;
+    left: 0;
+    top: 376px;
+  }
+  .powerfull .description-second::before {
+    left: 0;
+  }
+}
+
+@media (max-width: 391px) {
+  .powerfull .description-first {
+    top: 270px;
+  }
+  .powerfull .description-second {
+    top: 420px;
   }
 }
 /*# sourceMappingURL=style.css.map */
