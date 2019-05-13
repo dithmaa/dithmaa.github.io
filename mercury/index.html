@@ -8,9 +8,8 @@
     <link rel="icon" href="img/favicon/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">    
     <link rel="stylesheet" href="libs/slick/slick.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header" id="header" style="background-image: url('img/header-bg.jpg')">
@@ -46,7 +45,8 @@
             </div>
         </div>
     </header>
-    <section class="features container">
+    
+    <section class="features container" id="features">
         <div class="features-item">
             <div class="features--icon">
                 <img src="img/features/1.png" alt="Workflow">
@@ -80,6 +80,7 @@
             </p>
             <a href="#" class="features--button">See more</a>
         </div>
+        
     </section>
     <section class="browser" style="background-image: url('img/browser/browser.png')">
         <div class="container">
@@ -180,23 +181,23 @@
                 </div>
             </div>
         </div>
-        <div class="dragdrop-slider">
-            <div class="dragndrop--slide">
+        <div class="dragdrop-slider" id="dragdrop">
+            <div class="dragdrop--slide">
                 <h2 class="h2">Drag & Drop</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation 
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="dragndrop--slide">
-                <h2 class="h2">UI Design</h2>
+            <div class="dragdrop--slide">
+                <h2 class="h2">Drag & Drop</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation 
                 ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="dragndrop--slide">
-                <h2 class="h2">UX Design</h2>
+            <div class="dragdrop--slide">
+                <h2 class="h2">Drag & Drop</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation 
@@ -222,6 +223,46 @@
             </div>
         </div>
     </section>
+    <section class="pricing">
+        <div class="container">
+            <h2 class="h2">Check our pricing!</h2>
+            <div class="pricing-plan" id="pricing">
+                <div class="pricing-item">
+                    <h3 class="h3">Bronze Plan</h3>
+                    <div class="number"><span class="dollar">$</span>19<span class="month">/mon</span></div>
+                    <ul class="pricing-list">
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="cansel"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="cansel"></div>Lorem ispum dolor sit am</li>
+                    </ul>
+                </div>
+                <div class="pricing-item">
+                    <h3 class="h3">Silver Plan</h3>
+                    <div class="number"><span class="dollar">$</span>49<span class="month">/mon</span></div>
+                    <ul class="pricing-list">
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="cansel"></div>Lorem ispum dolor sit am</li>
+                    </ul>
+                </div>
+                <div class="pricing-item">
+                    <h3 class="h3">Gold Plan</h3>
+                    <div class="number"><span class="dollar">$</span>99<span class="month">/mon</span></div>
+                    <ul class="pricing-list">
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                        <li><div class="agree"></div>Lorem ispum dolor sit am</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="libs/slick/slick.js"></script>
     <script src="js/main.js"></script>
 </body>

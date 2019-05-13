@@ -1,9 +1,11 @@
 @import "vars"
+*
+    box-sizing: border-box
 html
     overflow-x: hidden
 body
     font-family: $roboto-font
-    height: 4000px
+    height: 14000px
     margin: 0
     line-height: 1.75
 ul
@@ -104,29 +106,32 @@ header
             &:hover
                 background-color: rgba(85, 132, 255, 1)
                 color: white
-.slick-slide 
-    margin: 0 60px
+
 .features-arrow
     border: none
     background-color: transparent 
-    width: 25px
-    height: 30px
+    width: 20px
+    height: 25px
     background:  no-repeat center center
     background-size: cover
     position: absolute
     top: 50%
     transform: translateY(-50%)
+    opacity: 0.4
 .features-prev
     background-image: url('../img/features/left-arrow.svg')
-    left: -60px
+    left: -15px
 .features-next
     background-image: url('../img/features/right-arrow.svg')
-    right: -60px
+    right: -15px
 .features
     position: relative
     display: flex
     margin-top: 240px
+    margin-bottom: 100px
     justify-content: space-between
+    .slick-slide 
+        padding: 0 60px
     &-item
         text-align: center
         p 
@@ -193,22 +198,21 @@ header
     margin-bottom: 13px
     position: relative
 .dragdrop
-    padding: 160px 5% 200px
     display: flex
     color: #fff
-    justify-content: space-between
     align-items: center
-    &-slider 
-        position: relative
-    &-arrow 
+    padding: 120px 5% 160px
+    &-arrow
         position: absolute
-        bottom: -70px
+        bottom: 0
+        margin-bottom: -45px
         border: none
         background-color: transparent
-        left: 54px
-    &-next 
+    &-next
         margin-left: 54px
-    &-prev 
+    &-slider 
+        width: 533px
+        margin-left: 118px
     &--progres
         margin-right: 48px
     
@@ -259,20 +263,21 @@ header
             font-weight: 500
             font-size: 18px
     &-slider
-        width: 38%
         .h2
             font-size: 60px
             line-height: 1.3
-            margin-bottom: 10px
+            margin-bottom: 25px
             font-weight: 300
         p 
             font-size: 18px
+            margin: 25px 0
             color: #8492af
     &-area
         display: flex
         .h3
             color: #ffffff
             font-size: 30px
+            margin-bottom: 15px
             span
                 color: #8492af
 .invisible
@@ -347,4 +352,56 @@ header
         p 
             color: #8492af
 
+.agree, .cansel 
+    width: 24px
+    height: 24px
+    display: inline-block
+    margin-right: 14px
+.agree 
+    background: url('../img/price/agree.png')
+.cansel 
+    background: url('../img/price/cansel.png')
+
+.pricing    
+    .h2
+        font-size: 60px
+        font-weight: 100
+        text-align: center
+    .slick-list 
+        overflow: visible
+    .slick-slide 
+        margin: 0 55px
+    &-item 
+        text-align: center
+        background-color: #fff
+        box-shadow: 0 0 20px rgba(#5584ff, .5)
+        padding-top: 48px
+        padding-bottom: 48px
+        .h3 
+            margin: 0
+            color: #0e1a35
+            font-size: 24px
+            text-transform: uppercase
+            font-weight: 400
+        .number
+            color: #0e1a35
+            font-size: 72px
+            font-weight: 700
+        .dollar 
+            font-size: 44px
+        .month
+            color: #8492af
+            font-size: 24px
+            font-weight: normal
+    &-list
+        padding-top: 10px
+        li 
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 18px
+            color: #8492af
+            padding: 4px 0
+            letter-spacing: 0.36px
+    
 @import "media"

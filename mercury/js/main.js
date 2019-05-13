@@ -1,11 +1,50 @@
-$(".features").slick({
+$('#features').slick({
   dots: false,
-  infinite: true,
+  infinite: false,
   speed: 300,
   slidesToShow: 3,
-  slidesToScroll: 3,
-  prevArrow: '<button type="button" class="features-prev features-arrow"></button>',
-  nextArrow: '<button type="button" class="features-next features-arrow"></button>',
+  slidesToScroll: 1,
+  prevArrow: '<button class="features-prev features-arrow"></button>',
+  nextArrow: '<button class="features-next features-arrow"></button>',
+  responsive: [
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 2
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+$('#dragdrop').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow: '<button class="dragdrop-prev dragdrop-arrow"><img src="img/dragdrop/prev.png" alt="prev"></button>',
+  nextArrow: '<button class="dragdrop-next dragdrop-arrow"><img src="img/dragdrop/next.png" alt="next"></button>'
+});
+
+
+$('#pricing').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  prevArrow: '<button class="features-prev features-arrow"></button>',
+  nextArrow: '<button class="features-next features-arrow"></button>',
   responsive: [
     {
       breakpoint: 992,
@@ -18,20 +57,16 @@ $(".features").slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        infinite: true
       }
     }
-  ] 
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
-$('.dragdrop-slider').slick({
-  dots: false,
-  infinite: true,
-  speed: 600,
-  slideToShow: 1,
-  slideToScroll: 1,
-  prevArrow: '<button type="button" class="dragdrop-prev dragdrop-arrow"><img alt="prev" src="img/dragdrop/prev.png"></button>',
-  nextArrow: '<button type="button" class="dragdrop-next dragdrop-arrow"><img alt="next" src="img/dragdrop/next.png"></button>'
-});
+
 //drag'n drop
 const fill = document.querySelector('.task');
 const empties = document.querySelectorAll('.drop');
