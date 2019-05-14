@@ -12,8 +12,10 @@ ul
     margin: 0
 header
     height: 95vh
+    background-position-x: center
     background-size: cover
     position: static
+
 .overflow-h
     overflow-y: hidden
 .main-menu 
@@ -74,6 +76,7 @@ header
         position: relative
         overflow: hidden
         &:hover
+            background-color: darken(#5584ff, 5%)
             &:before
                 animation: light .7s ease .5s
         &:before
@@ -88,9 +91,8 @@ header
             left: 0
             height: 100%
             opacity: 0.6
-            
-        &:hover
-            // background-color: darken(#5584ff, 5%)
+
+           
     .h1 
         color: white
         font-size: 54px
