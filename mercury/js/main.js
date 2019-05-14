@@ -1,11 +1,26 @@
+$('.top-nav .hamburger').on('click', function(){
+  $('.menu-list').toggleClass('active');
+  $('html').toggleClass('overflow-h');
+  $(this).toggleClass('active');
+});
+
+$(window).on('resize', function(){
+  var $containerWidth = $(window).width();
+  if($containerWidth >= 992){
+    $('.menu-list').removeClass('active');
+    $('html').removeClass('overflow-h');
+    $(this).removeClass('active');
+  }
+});
+
 $('#features').slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow: '<button class="features-prev features-arrow"></button>',
-  nextArrow: '<button class="features-next features-arrow"></button>',
+  prevArrow: '<button class="dragdrop-prev dragdrop-arrow"><img src="img/dragdrop/prev.png" alt="prev"></button>',
+  nextArrow: '<button class="dragdrop-next dragdrop-arrow"><img src="img/dragdrop/next.png" alt="next"></button>',
   responsive: [
     {
       breakpoint: 992,
@@ -18,7 +33,7 @@ $('#features').slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 2
+        slidesToScroll: 1
       }
     }
     // You can unslick at a given breakpoint now by adding:
@@ -28,7 +43,7 @@ $('#features').slick({
 });
 $('#dragdrop').slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -39,12 +54,12 @@ $('#dragdrop').slick({
 
 $('#pricing').slick({
   dots: false,
-  infinite: false,
+  infinite: true,
   speed: 300,
   slidesToShow: 3,
   slidesToScroll: 1,
-  prevArrow: '<button class="features-prev features-arrow"></button>',
-  nextArrow: '<button class="features-next features-arrow"></button>',
+  prevArrow: '<button class="dragdrop-prev dragdrop-arrow"><img src="img/dragdrop/prev.png" alt="prev"></button>',
+  nextArrow: '<button class="dragdrop-next dragdrop-arrow"><img src="img/dragdrop/next.png" alt="next"></button>',
   responsive: [
     {
       breakpoint: 992,
