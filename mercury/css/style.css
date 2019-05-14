@@ -1037,6 +1037,9 @@ header {
 }
 
 @media (max-width: 569px) {
+  .footer-copy {
+    font-size: 14px;
+  }
   .pricing .slick-slide {
     margin: 0 40px;
   }
@@ -1219,9 +1222,6 @@ header {
 @media (max-width: 391px) {
   .footer a {
     padding: 0 5px;
-  }
-  .pricing .slick-list {
-    overflow: visible;
   }
   .pricing .slick-slide {
     margin: 0 10px;
