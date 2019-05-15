@@ -1,3 +1,10 @@
+var navLink = $('li a');
+navLink.on('click', function(event){
+  event.preventDefault();
+  var target =  $(this).attr('href');
+  var top = $(target).offset().top;
+  $("html, body").animate({scrollTop: top}, 500);
+});
 $('.top-nav .hamburger').on('click', function(){
   $('.menu-list').toggleClass('active');
   $('html').toggleClass('overflow-h');
@@ -11,6 +18,15 @@ $(window).on('resize', function(){
     $('html').removeClass('overflow-h');
     $(this).removeClass('active');
   }
+});
+$(window).scroll(function (){
+  $('.powerfull').each(function (){
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+250) {
+          $('.description, .powerfull .h3, .powerfull p').addClass('active');
+      }
+  });
 });
 
 $('#features').slick({
@@ -52,7 +68,7 @@ $('#dragdrop').slick({
 });
 
 
-$('#pricing').slick({
+$('#pricing-slider').slick({
   dots: false,
   infinite: true,
   speed: 300,
