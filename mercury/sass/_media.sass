@@ -39,9 +39,6 @@
             width: 348px
         &--progres
             margin-right: 15px
-    .features 
-        .owl-item
-            padding: 0 20px
 @media (max-width: 1360px)
     .pricing 
         .slick-slide 
@@ -83,6 +80,13 @@
             &::before //line
                 width: 457px
 @media (max-width: 1200px)
+    .footer 
+        flex-direction: column
+        align-items: center
+        padding: 41px 5%
+        &-copy 
+            order: 2
+            padding-top: 30px
     .join
         p 
             width: 80%
@@ -124,9 +128,6 @@
                 font-size: 20px 
             p 
                 font-size: 16px
-    .features 
-        .owl-item
-            padding: 0 15px
 @media (max-width: 992px)   
     .main-menu 
         display: block
@@ -254,9 +255,13 @@
 @media (max-width: 768px)
     .footer 
         a 
-            padding: 0 10px
+            padding: 0 15px
             &.social 
-                padding: 0 4px
+                padding: 0 8px
+        &-copy 
+            text-align: center
+            br 
+                display: block
     .join
         p 
             width: 90%
@@ -276,7 +281,7 @@
     .container 
         max-width: 95%
     .powerfull 
-        padding: 54px 0 94px
+        padding-top: 54px 
         .h2
             font-size: 35px
         p 
@@ -316,6 +321,8 @@
                 padding-left: 0
                 padding-right: 0
     .powerfull
+        &-gradient 
+            height: 120px
         .h2
             font-size: 30px
         .screen 
@@ -375,7 +382,7 @@
                 width: 20px
                 height: 20px
     .features
-        margin-top: 40%
+        padding-top: 40%
         &--button
             padding: 10px 54px
     .top-nav
@@ -391,11 +398,22 @@
             width: 95%
             margin-top: 60px
 @media (max-width: 498px)
+    .powerfull 
+        &-gradient 
+            display: none
+    .join 
+        p 
+            font-size: 14px
     .footer 
         a
             &.social 
                 display: none
+        &-copy 
+            font-size: 12px
     .pricing 
+        .h2 
+            margin-top: 20px
+            font-size: 30px
         .slick-slide 
             margin: 0 35px
             .number
@@ -422,7 +440,18 @@
             p 
                 padding: 0 15px
     .powerfull
-        padding: 54px 0 29px
+        .description
+            .h3
+                animation: none
+                opacity: 1
+            p 
+                animation: none 
+                transform: scaleY(1)
+                opacity: 1
+        padding-bottom: 20px
+        &-gradient 
+            display: none
+        padding-top: 54px 
         .h1 
             font-size: 25px
         .screen 
@@ -435,6 +464,7 @@
                 margin: 0
             &-first 
                 top: 213px
+                margin-top: 40px
             &::after 
                 display: none
             &::before 
@@ -442,8 +472,10 @@
             &-second 
                 left: 0
                 top: 376px
+                margin-top: 40px
                 &::before 
                     left: 0 
+
 @media (max-width: 391px)
     .footer 
         a 

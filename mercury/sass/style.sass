@@ -11,7 +11,7 @@ ul
     padding: 0
     margin: 0
 header
-    height: 95vh
+    height: 920px
     background-position-x: center
     background-size: cover
     position: static
@@ -198,7 +198,7 @@ header
 .features
     position: relative
     display: flex
-    margin-top: 240px
+    padding-top: 240px
     margin-bottom: 100px
     justify-content: space-between
     .slick-slide 
@@ -366,7 +366,10 @@ header
 .powerfull
     text-align: center
     background-color: #f6f7fa
-    padding: 100px 0 172px
+    padding-top: 100px
+    &-gradient 
+        height: 166px
+        background: url('../img/powerfull/gradient.png') center 
     .container 
         position: relative
     .h2
@@ -384,28 +387,51 @@ header
         background-size: contain
         display: inline-block
         margin-top: 60px
+    @keyframes lineanimation
+        0% 
+            width: 0
+        100%
+            width: 100%
+            opacity: 1  
+    @keyframes circleanimation
+        0% 
+            transform: scale(0)
+        100%
+            transform: scale(1)
+    @keyframes textanimation
+        0%
+            transform: scaleY(0)
+            opacity: 0
+        100%
+            opacity: 1
+            transform: scaleY(1)
+    @keyframes titleanimation
+        0%
+            opacity: 0
+        100% 
+            opacity: 1
     .description 
         text-align: left
         position: absolute
-        width: 644px
+        width: 607px
         &-first 
             top: 280px
             left: 0
             &::before //line 
-                left: 0
+                right: 0
         &-second 
             text-align: right
             right: 0
             top: 560px
             &::after //circle
-                left: 0
+                left: -37px
             &::before //line 
-                right: 0
+                left: 0
         &::after //circle
             content: ''
             position: absolute
             top: 0
-            right: 0
+            right: -37px
             display: inline-block
             margin-top: 28px
             width: 30px
@@ -414,20 +440,45 @@ header
             border-radius: 50%
             border: 7px solid rgba(153, 204, 255, .6)
             opacity: 0.8
+            transform: scale(0)
+            transition: all .25s ease
+            animation: circleanimation 1s ease forwards paused 
+        
         &::before //line
             content: ''
             position: absolute
             top: 0
             margin-top: 48px
-            width: 607px
+            width: 100%
+            opacity: 0
             height: 2px
             background-color: #5584ff
+            animation: lineanimation 1s ease 1s forwards paused
+        &.active 
+            &::before
+                animation: lineanimation 1s ease 1s forwards running
+            &::after 
+                animation: circleanimation 1s ease forwards running
 
         .h3 
             font-size: 24px
             margin: 0
+            opacity: 0
+            transition: .25s ease
+            animation: titleanimation 1s ease 2s forwards 
+            animation-play-state: paused
+            &.active 
+                animation-play-state: running
         p 
             color: #8492af
+            transition: .25s ease
+            transform: scaleY(0)
+            transform-origin: top
+            opacity: 0
+            animation: textanimation 1s ease 2s forwards 
+            animation-play-state: paused
+            &.active 
+                animation-play-state: running
 
 .agree, .cansel 
     width: 24px
@@ -505,18 +556,41 @@ header
     color: #8492af
     justify-content: space-between
     display: flex
-    a 
-        color: #8492af
-        text-decoration: none
-        padding: 0 25px
-        transition: all .25s ease
-        &:hover
+    &-copy 
+        br 
+            display: none
+        a 
+            text-decoration: none
             color: #fff
-        &.social 
-            padding: 0 10px
-            img 
-                transform: all .25s ease
-                &:hover 
-                    transform: scale(.95)
+            transition: color .25s ease
+            position: relative
+            &:hover 
+                &::before 
+                    transform: scaleX(.7)
+            &::before 
+                content: ''
+                position: absolute
+                bottom: -4px
+                left: 0
+                width: 100%
+                height: 2px
+                background-color: #fff
+                transition: all .25s ease .2s
+                transform: scaleX(0)
+                transform-origin: left
+    &-nav 
+        a 
+            color: #8492af
+            text-decoration: none
+            padding: 0 25px
+            transition: all .25s ease
+            &:hover
+                color: #fff
+            &.social 
+                padding: 0 10px
+                img 
+                    transform: all .25s ease
+                    &:hover 
+                        transform: scale(.95)
 
 @import "media"

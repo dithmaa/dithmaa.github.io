@@ -5,10 +5,17 @@ navLink.on('click', function(event){
   var top = $(target).offset().top;
   $("html, body").animate({scrollTop: top}, 500);
 });
+
 $('.top-nav .hamburger').on('click', function(){
   $('.menu-list').toggleClass('active');
   $('html').toggleClass('overflow-h');
   $(this).toggleClass('active');
+});
+$('.main-menu li').on('click', function(){
+  $('html').removeClass('overflow-h');
+  $('.menu-list').removeClass('active');
+  $('.hamburger').removeClass('active');
+  
 });
 
 $(window).on('resize', function(){
