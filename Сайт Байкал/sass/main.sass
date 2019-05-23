@@ -1,0 +1,155 @@
+$accent: #ee632c
+    
+*, *::before, *::after 
+    box-sizing: border-box
+body, html 
+    font-family: 'Open Sans', sans-serif
+    margin: 0
+header 
+    height: 100vh
+    background-size: cover
+    color: #ffffff
+    line-height: 1.55
+.container
+    width: 90%
+    max-width: 1430px
+    margin: 0 auto
+.top-nav 
+    display: flex
+    height: 154px
+    align-items: center
+    .hamburger
+        width: 30px
+        height: 30px
+        display: inline-block
+        width: 36px
+        height: 30px
+        &-inner 
+            width: 100%
+            height: 4px
+            display: block
+            margin-bottom: 8px
+            background-color: #fff
+    .number
+        margin-left: auto
+        background-color: #fff
+        padding: 6px 18px
+        margin-right: 24px
+        font-size: 30px
+        font-weight: 700 
+        transition: all .25s ease
+        a 
+            color: $accent
+            text-decoration: none
+            transition: all .25s ease
+
+.home 
+    padding-top: 130px
+    position: relative
+    .baikal 
+        width: 601px
+        height: 769px
+        display: block
+        position: absolute
+        top: 0
+        right: 70px
+        background: url('../img/baikal.png') center no-repeat / cover
+        &-number 
+            background-color: $accent
+            width: 54px
+            height: 54px
+            display: inline-block
+            font-size: 28px
+            font-weight: 700
+            text-align: center
+            line-height: 50px
+            border-radius: 100px
+            box-shadow: 0 5px 21px 1px rgba($accent, .71);
+        &-dot 
+            display: flex
+            position: absolute
+            p 
+                font-size: 18px
+                font-weight: 700
+                margin: 0
+        &-irkutsk
+            bottom: 141px
+            p 
+                padding-left: 30px
+                padding-top: 20px   
+        &-olhon 
+            left: 308px
+            top: 355px
+            p 
+                padding-top: 40px 
+                padding-left: 40px
+        &-ushkan
+            left: 500px
+            top: 230px  
+            display: flex
+            flex-direction: column
+            p 
+                font-size: 15px
+                line-height: 1.2
+                margin-left: -20px
+                padding-top: 5px
+        &-zaliv 
+            flex-direction: column
+            left: 550px
+            top: 380px
+            p 
+                padding-bottom: 10px
+                padding-left: 20px
+                order: -1
+                line-height: 1.2
+                font-size: 15px
+        &-turka
+            left: 490px
+            top: 530px
+            flex-direction: column
+            p 
+                order: -1
+                font-size: 15px
+                margin-left: -10px
+                margin-bottom: 10px
+        &-uu 
+            top: 620px
+            left: 470px
+            flex-direction: column
+            .baikal-number 
+                margin-left: 20px
+                margin-top: 5px
+            p 
+                order: -1
+                font-size: 15px
+        &-acagat
+            flex-direction: column 
+            top: 670px
+            left: 380px
+            p 
+                padding-bottom: 10px
+                font-size: 15px
+                order: -1
+
+
+    .h1 
+        font-size: 61px
+        line-height: 1.2
+        margin: 20px 0
+    p 
+        font-size: 22px
+    .button 
+        font-size: 25px
+        color: #ffffff
+        text-decoration: none
+        background-color: $accent
+        padding: 12px 58px
+        box-shadow: 0 5px 21px 1px rgba($accent, .31);
+        border-radius: 38px
+        padding-bottom: 20px
+        display: inline-block
+        margin-top: 10px
+        transition: all .25s linear
+        &:hover 
+            box-shadow: 0 5px 21px 1px rgba($accent, .71);
+        
