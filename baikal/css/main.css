@@ -1,0 +1,253 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+header {
+  height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+  line-height: 1.55;
+}
+
+.container {
+  width: 90%;
+  max-width: 1430px;
+  margin: 0 auto;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 154px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-nav .hamburger {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  width: 36px;
+  height: 30px;
+}
+
+.top-nav .hamburger-inner {
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+
+.top-nav .number {
+  margin-left: auto;
+  background-color: #fff;
+  padding: 6px 18px;
+  margin-right: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.top-nav .number a {
+  color: #ee632c;
+  text-decoration: none;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.home {
+  padding-top: 130px;
+  position: relative;
+}
+
+.home .baikal {
+  width: 601px;
+  height: 769px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  background: url("../img/baikal.png") center no-repeat/cover;
+}
+
+.home .baikal-number {
+  background-color: #ee632c;
+  width: 54px;
+  height: 54px;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.71);
+          box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.71);
+}
+
+.home .baikal-dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+}
+
+.home .baikal-dot p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.home .baikal-irkutsk {
+  bottom: 141px;
+}
+
+.home .baikal-irkutsk p {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.home .baikal-olhon {
+  left: 308px;
+  top: 355px;
+}
+
+.home .baikal-olhon p {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.home .baikal-ushkan {
+  left: 500px;
+  top: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .baikal-ushkan p {
+  font-size: 15px;
+  line-height: 1.2;
+  margin-left: -20px;
+  padding-top: 5px;
+}
+
+.home .baikal-zaliv {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 550px;
+  top: 380px;
+}
+
+.home .baikal-zaliv p {
+  padding-bottom: 10px;
+  padding-left: 20px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  line-height: 1.2;
+  font-size: 15px;
+}
+
+.home .baikal-turka {
+  left: 490px;
+  top: 530px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .baikal-turka p {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  font-size: 15px;
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.home .baikal-uu {
+  top: 620px;
+  left: 470px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .baikal-uu .baikal-number {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.home .baikal-uu p {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  font-size: 15px;
+}
+
+.home .baikal-acagat {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 670px;
+  left: 380px;
+}
+
+.home .baikal-acagat p {
+  padding-bottom: 10px;
+  font-size: 15px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+.home .h1 {
+  font-size: 61px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.home p {
+  font-size: 22px;
+}
+
+.home .button {
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ee632c;
+  padding: 12px 58px;
+  -webkit-box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.31);
+          box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.31);
+  border-radius: 38px;
+  padding-bottom: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+.home .button:hover {
+  -webkit-box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.71);
+          box-shadow: 0 5px 21px 1px rgba(238, 99, 44, 0.71);
+}
+/*# sourceMappingURL=main.css.map */
