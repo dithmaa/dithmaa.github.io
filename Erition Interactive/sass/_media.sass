@@ -1,0 +1,364 @@
+@media screen and (min-width: 396px)
+    .testimonials
+        &-content 
+            padding: 37px
+        &-item 
+            margin: 40px
+
+@media screen and (min-width: 768px)
+    .mobile-menu
+        padding-top: 66px
+    body 
+        opacity: 1
+    .main
+        .container
+            display: flex
+            justify-content: space-between
+        &-content 
+            margin-top: 70px
+        &-offer
+            margin-top: 0
+            margin-left: 30px
+    .software
+        .col-md-6.col-lg-4
+            display: block
+            visibility: visible
+        &-content 
+            padding-top: 18px
+        &-row
+            // justify-content: space-between
+        &-picture
+            height: 20vh
+        &-item
+            // max-width: 320px
+            // width: 100%
+            // margin-right: 10px
+            &:nth-child(even)
+                // opacity: 0.3
+                // margin-right: 0
+    .testimonials
+        &-item
+            margin: 30px
+        .slick-dots
+            bottom: -20px
+    .footer
+        .container
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: wrap
+        &-feedback
+            display: flex
+            flex-direction: column
+            align-items: start
+        &-creators
+            order: 3
+            margin-top: 146px
+            width: 100%
+            text-align: right
+        .logo
+            order: 1
+        &-contacts
+            order: 2
+            flex-direction: row
+            margin-top: 0
+        &-social
+            margin-top: 0
+            margin-left: 17px
+    .popup
+        &-wrap
+            &.info-active
+                .popup-offer 
+                    transform: translate(250%,-50%)
+                .popup-info
+                    transform: translate(-50%,-50%)
+@media screen and (min-width: 992px)
+    .main 
+        &-offer 
+            margin-left: 114px
+    .software
+        &-item
+            // max-width: 280px
+    .testimonials
+        &-item
+            margin: 20px
+        .testimonials-next
+            right: -30px
+        .testimonials-prev
+            left: -30px
+        .slick-dots
+            bottom: -25px
+@media screen and (min-width: 1200px)
+    .mobile-menu
+        display: none
+        visibility: hidden
+        opacity: 0
+    .phone
+        transition: .25s ease all
+        span 
+            transition: .25s ease all
+        &:hover 
+            opacity: 0.7
+            span 
+                transform: scale(0) rotate(30deg)
+    h1,h2
+        font-size: 48px
+    .top-nav
+        padding: 14px 0
+        .logo,.phone
+            padding: 20px 0
+        .menu
+            display: flex
+        .phone 
+            display: flex
+        
+
+    
+            
+    .menu
+        li 
+            margin-right: 38px
+            font-size: 18px
+            position: relative
+            transition: .5s ease opacity
+            padding: 20px 0
+            
+            cursor: pointer
+            &::after
+                content: ''
+                width: 60%
+                position: absolute
+                bottom: 5px
+                left: 0
+                right: 0
+                margin: 0 auto
+                height: 2px
+                background-color: $accent
+                border-radius: 10px
+                transition: .25s ease all 
+                transform: scaleX(0)
+            &:hover 
+                opacity: 0.8
+                &::after
+                    transform: scaleX(1)
+            &:last-child
+                margin-right: 0
+    .logo
+        font-size: 20px
+        position: relative
+        overflow: hidden
+        img
+            transition: .5s ease all
+        &:hover 
+            color: #1E76BD
+            &::after 
+                transform: translate(0,-50%)
+            img 
+                transform: scale(0)
+        &::after
+           content: '' 
+           width: 84%
+           height: 2px
+           position: absolute
+           top: 50%
+           right: 0
+           background-color: #1E76BD
+           transform: translate(-130%,-50%) 
+           transition: .2s ease all
+    .main 
+        p 
+            font-size: 18px
+        &-cta 
+            font-size: 18px
+            padding: 16px 34px
+            position: relative
+            overflow: hidden
+            &:hover 
+                &::after 
+                    transform: rotate(-30deg) translateY(160px)
+            &::after 
+                content: ''
+                position: absolute
+                top: 0
+                margin-top: 10px
+                left: -260px
+                height: 10px
+                background-color: #fff
+                opacity: 0.6
+                width: 450px
+                transform: rotate(-30deg)
+                transition: .25s ease all
+        &-content 
+            max-width: 470px
+            margin-top: 140px
+        &-offer
+            margin-left: 0
+            box-shadow: 7px 15px 65px rgba(0, 0, 0, 0.21)
+            border-top-left-radius: 30px
+            border-bottom-right-radius: 30px
+            overflow: hidden 
+            img 
+                width: 100%
+                height: 100%
+                object-fit: cover
+    .top-nav
+        &__hamburger
+            display: none
+    .software
+        &-content 
+            padding-top: 26px
+        .h3
+            font-size: 20px
+        &-item
+            // max-width: 370px
+            margin-bottom: 40px
+            &:hover 
+                .software-picture
+                    img 
+                        transform: scale(1.1)
+        &-picture
+            height: 228px
+        &-price
+            font-size: 16px
+        &-row 
+            justify-content: start
+    .testimonials
+        .testimonials-next,.testimonials-prev
+            transition: .2s ease all
+            &:hover 
+                box-shadow: 3px 3px 42px rgba(116, 155, 255, 0.50)
+        .slick-dots
+            bottom: -42px
+            li 
+                margin: 0 5px
+                button 
+                    &::before
+                        font-size: 14px
+        &-view
+            font-size: 16px
+            padding: 23px 30px
+            img 
+                max-width: 17px
+        .testimonials-next
+            right: -40px
+        .testimonials-prev
+            left: -40px
+        h2 
+            margin-bottom: 41px
+        &-top
+            padding: 23px
+            flex-direction: row
+            justify-content: space-between
+        &-content 
+            text-align: left
+            font-size: 18px
+            padding: 37px 50px
+        .user 
+            flex-direction: row
+            &-avatar
+                margin-bottom: 0
+                margin-right: 13px
+        &-item
+            margin: 10px
+        &-view 
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+            transition: .2s ease all
+            &:hover 
+                background-color: rgba($accent,.1)
+    .footer
+        padding-top: 35px
+        padding-bottom: 265px
+        margin-top: 120px
+        &-social
+            cursor: pointer
+            transition: .25s ease all
+            &:hover 
+                opacity: 0.8
+        &-creators
+            width: auto
+            margin-top: 0
+            order: 2
+            transition: .25s ease opacity
+            &:hover 
+                opacity: 0.4
+            br 
+                display: none
+        &-contacts
+            order: 3
+        .phone
+            font-size: 20px
+        .email
+            font-size: 14px
+            margin-top: 8px
+            &:hover 
+                color: #fff
+        &-creators
+            font-size: 14px
+    .popup-offer
+        display: flex
+        max-width: 70%
+        justify-content: space-between
+        .main-cta
+            font-size: 16px
+        .popup-content
+            order: 2
+            padding-left: 62px
+            padding-right: 60px
+
+            
+        .popup-picture
+            min-width: 370px
+            max-width: 370px
+            height: 435px
+        .h3
+            font-size: 30px
+        p
+            font-size: 14px
+        .popup-price
+            font-size: 14px
+            margin-left: 22px
+        .popup-top
+            justify-content: start
+            margin-top: 60px
+    .popup
+        &-close
+            max-width: 26px
+            width: 26px
+            margin-top: 40px
+            margin-right: 38px
+    .popup-info
+        display: flex
+        max-width: 70%
+        padding-top: 116px
+        padding-bottom: 84px
+        .h3 
+            font-size: 24px
+        p 
+            font-size: 14px
+        .main-cta 
+            font-size: 16px
+            margin-top: 10px
+        .popup-price
+            font-size: 14px 
+        .popup-content
+            order: 2
+            min-width: 343px
+            margin-left: 83px
+        .popup-top
+            justify-content: start
+        .popup-price
+            margin-left: 20px
+        .popup-picture
+            display: block
+            height: 220px
+            margin-bottom: 24px
+@media screen and (min-width: 1400px)
+    .testimonials
+        &-item
+            margin: 10px 30px
+    .software
+        &-item
+            margin-left: 20px
+            margin-right: 20px
+    .popup-offer, .popup-info
+        max-width: 900px
