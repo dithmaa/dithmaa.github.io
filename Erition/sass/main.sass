@@ -1,0 +1,398 @@
+$dark: #292D34
+$gray: #7C828D
+$accent: #749BFF
+*,*:after,*:before
+    box-sizing: border-box
+ul,li
+    padding: 0
+    margin: 0
+    list-style: none
+h1,h2
+    font-size: 28px
+h2
+    margin-bottom: 41px
+img
+    width: 100%
+body
+    color: $dark
+    background-color: #F8FCFF
+    font-family: 'Rubik', sans-serif
+    padding: 0
+    margin: 0
+    overflow-x: hidden
+.mobile-menu
+    padding: 60px 0
+    background-color: #fff
+    position: absolute
+    width: 100%
+    top: 0
+    left: 0
+    margin-top: 66px
+    padding-top: 30px
+    box-shadow: 0px 4px 10px  rgba(0,0,0,.11)
+    transition: .25s ease all
+    transform: translateY(-150%)
+    z-index: 40
+    &.is-active
+        transform: translateY(0)
+    .phone
+        margin-top: 20px
+        font-size: 16px
+    &__item
+        padding: 20px
+        font-size: 14px
+.flex
+    display: flex
+.jcsb
+    justify-content: space-between
+.aic
+    align-items: center
+.jcc
+    justify-content: center
+.fxdc
+    flex-direction: column
+a 
+    text-decoration: none
+    color: inherit
+.phone
+    font-weight: bold
+    font-size: 20px
+    span 
+        margin-right: 12px
+        img 
+            max-width: 17px
+.top-nav
+    background-color: #fff
+    padding: 18px 0
+    position: relative
+    z-index: 50
+    .menu
+        display: none
+    .phone
+        display: none
+.logo
+    font-size: 16px
+    font-weight: bold
+    img 
+        max-width: 29px
+    span 
+        padding-left: 7px
+.hamburger
+    width: 23px
+    height: 15px
+    position: relative
+    cursor: pointer
+
+    &::after,&::before,span
+        width: 100%
+        height: 1px
+        background-color: $dark
+        position: absolute
+        right: 0
+
+
+    &::after,&::before
+        content: ''
+
+    &::before 
+        top: 0
+    &::after
+        bottom: 0
+        max-width: 17px
+
+    span
+        display: inline-block
+        top: 50%
+        transform: translateY(-50%)
+        max-width: 13px
+.main
+    margin-top: 67px
+    .h1
+        margin: 0
+    p 
+        font-size: 12px
+        color: $gray
+        margin: 0
+        padding: 7px 0 16px 0
+        line-height: 1.4
+    &-cta 
+        padding: 10px 26px
+        background-color: $accent
+        color: #fff
+        border-radius: 6px
+        display: inline-block
+        font-size: 14px
+        font-weight: bold
+        box-shadow: 8px 5px 30px rgba($accent,.3)
+        margin-bottom: 23px
+    &-offer
+        margin-top: 23px
+section, main 
+    margin-bottom: 74px
+
+.software
+    .col-md-6.col-lg-4
+        display: none
+        visibility: hidden
+        &:nth-child(1),&:nth-child(2),&:nth-child(3)
+            display: block
+            visibility: visible
+    &-row
+        // display: flex 
+        // flex-wrap: wrap
+    &-item 
+        // width: 280px
+        margin-bottom: 28px
+        cursor: pointer
+        
+    &-picture 
+        width: 100%
+        height: 44vw
+        overflow: hidden
+        border-radius: 6px
+        border: 1px solid #D3D3D3
+        transition: .25s ease all
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: .25s ease all
+
+    &-item
+            
+    &-content 
+        padding-top: 12px
+    &-price
+        font-size: 12px
+        background-color: #FA5F5F
+        color: #fff
+        border-radius: 6px
+        padding: 4px 10px
+        margin-left: 15px
+    .h3
+        font-size: 16px
+
+.testimonials
+    &-slider
+        position: relative
+    
+    &-next, &-prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        background-color: #fff
+        box-shadow: 3px 3px 22px rgba(116, 155, 255, 0.18)
+        border: none
+        width: 40px
+        height: 40px
+        border-radius: 100px
+        cursor: pointer
+
+        img 
+            // max-width: 9px
+            width: 9px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+    &-next 
+        right: -15px
+        transform: translateY(-50%) rotate(-180deg)
+        
+    &-prev 
+        left: -15px
+    h2 
+        margin-bottom: 8px
+    &-view
+        color: #71A4FF
+        font-size: 14px
+        text-align: center
+        padding: 18px 30px
+        cursor: pointer
+        span 
+            margin-right: 6px
+        img 
+            max-width: 13px
+    &-content 
+        padding: 37px 12px
+        text-align: center
+        font-size: 14px
+    &-top
+        padding: 30px
+        text-align: center
+        border-bottom: 1px solid #EDEDED
+    .user
+        &-avatar
+            max-width: 43px
+            border-radius: 100px
+            overflow: hidden
+            margin-bottom: 12px
+        &-name
+            font-size: 16px
+            padding-bottom: 5px
+    &-date 
+        font-size: 12px
+        color: #B2B6BD
+    &-item
+        background-color: #fff
+        box-shadow: 3px 5px 18px rgba(0, 0, 0, 0.08)
+        position: relative
+        margin: 30px
+        width: 30%
+        // opacity: 0
+        border-radius: 6px
+        // transition: .25s ease opacity
+        &.slick-active
+            // opacity: 1
+    .slick-list
+        // overflow: visible
+        // padding: 20px
+
+    
+.slick-dots
+    bottom: -12px
+    li 
+        margin: 0 2px
+        button 
+            
+            &:hover,&:active,&:focus 
+                &::before 
+                    color: rgba(#749BFF,.4)
+            &::before 
+                font-size: 10px
+                color: #292D34
+                opacity: 0.24
+        &.slick-active
+            button
+                &::before
+                    color: #749BFF    
+.footer
+    padding: 30px 0
+    background-color: $dark
+    color: #fff
+    .phone 
+        font-size: 16px
+    
+    &-creators
+        font-size: 12px
+        opacity: 0.11
+        margin-top: 115px
+        line-height: 1.5
+    &-social
+        width: 48px
+        height: 33px
+        background-color: #547CE1
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 100px
+        margin-top: 16px
+        img 
+            width: 21px
+            transform: translateY(2px)
+    &-contacts
+        margin-top: 20px
+    .email
+        color: #C1C1C1
+        font-size: 12px
+        margin-top: 6px
+        display: inline-block
+.overflow
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    position: fixed
+    background-color: #000
+    z-index: 99
+    opacity: 0
+    transition: .25s ease all
+    visibility: hidden
+    &.is-active
+        opacity: 0.66
+        visibility: visible
+.popup
+    visibility: hidden
+    opacity: 0
+    padding: 0 36px
+    padding-top: 83px
+    padding-bottom: 46px
+    background-color: #fff
+    width: 100%
+    max-width: 300px
+    margin: 0 auto
+    border-radius: 15px
+    position: fixed
+    z-index: 100
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-250%) 
+    transition: .25s ease all
+    &-info
+        .popup-picture
+            display: none
+    &.is-active
+        transform: translate(-50%,-50%)
+        opacity: 1
+        visibility: visible
+    &-wrap 
+
+        &.info-active
+            // opacity: 0.3
+            .popup-offer 
+                transform: translate(150%,-50%)
+                visibility: hidden
+            .popup-info
+                transform: translate(-50%,-50%)
+                visibility: visible
+        
+    &-price
+        font-size: 12px
+    .main-cta 
+        font-size: 12px
+    &-info 
+        // top: 1300px
+        transform: translate(-250%,-50%)
+        visibility: hidden
+        padding-top: 61px
+        padding-bottom: 20px
+        max-width: 340px
+        .main-cta
+            margin-bottom: 4px
+    &.popup-info
+        .popup-top
+            margin-bottom: 10px 
+    &-close 
+        max-width: 17px
+        position: absolute
+        top: 0
+        right: 0
+        margin-top: 25px
+        margin-right: 32px
+        cursor: pointer
+    &-picture
+        width: 100%
+        height: 167px
+        border-radius: 6px
+        overflow: hidden
+        border: 1px solid #D3D3D3
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+    .h3
+        font-weight: bold
+        font-size: 20px
+        margin: 0
+    p
+        color: $gray
+        font-size: 12px
+        line-height: 1.5
+    &-price
+        background-color: #FA5F5F
+        color: #fff
+        border-radius: 6px
+        padding: 2px 7px
+@import "media"
