@@ -1,0 +1,234 @@
+@media (max-width: 1170px) {
+    .main .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .offer{
+        margin: 20px 0;
+    }
+    section h2{
+        font-size: 30px;
+    }
+    .cars-img{
+        width: 700px;
+        height: 400px;
+    }
+    .btn{
+        padding: 16px 24px;
+        font-size: 12px;
+    }
+    .better-img{
+        display: none;
+    }
+    .better-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .better-item{
+        width: 40vw;
+    }
+    .better-item{
+        border-radius: 15px;
+    }   
+    .order-imgs img{
+        width: 240px;
+    }
+    .order-number{
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+    .order-title{
+        font-size: 20px;
+    }
+    .testimonials-img{
+        width: 200px;
+    }
+    .testimonials-img img{
+        width: 100%;
+    }
+    .testimonials-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 992px){
+    .order-small{
+        justify-content: space-between;
+    }
+    .order-item{
+        width: 40vw;
+        justify-content: center;
+    }
+    .order-small .order-item{
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .order-imgs{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .order-imgs img{
+        margin: 30px;
+    }
+    .top-nav__right{
+        display: none;
+    }
+    
+    .header {
+        padding: 76px 0;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .offer-bg{
+        max-width: 100%;
+        background-size: cover;
+    }
+    section h2{
+        font-size: 24px;
+    }
+    .cars-nav .btn{
+        display: none;
+    }
+    .cars-nav .btn:first-child{
+        display: block;
+    }
+    .cars-img{
+        width: 500px;
+        height: 300px;
+    }
+    .top-nav__hamburger{
+        display: block;
+    }
+    .mobile-info{
+        display: flex;
+        position: absolute;
+        background-color: #f6faff;
+        width: 100%;
+        padding: 60px 0;
+        justify-content: center;
+        left: 0;
+        z-index: 99;
+        top: 104px;
+        box-shadow: 0 40px 30px rgba(0,0,0,0.2);
+        transition: .25s ease all;
+        transform: translateX(-150%);
+    }
+    .mobile-info.is-active{
+        transform: translateX(0%);
+    }
+}
+@media (max-width: 768px){
+    .faq-item.active{
+        height: 26vw;
+    }
+    .faq-item{
+        height: 14vw;
+    }
+    .order-item{
+        width: 100%;
+    }
+    .order-small{
+        flex-wrap: wrap;
+    }
+    .cars-img{
+        width: 300px;
+    }
+    .section-nav{
+        flex-direction: column;
+    }
+    .section-nav__btn{
+        margin: 20px 0;
+    }
+    .better-item{
+        width: 100%;
+    }
+}
+@media (max-width: 596px){
+    .faq-item.active{
+        height: 36vw;
+    }
+    .faq-item{
+        height: 20vw;
+    }
+    .cars-img{
+        width: 60vw;
+        margin-left: 30px;
+        margin-right: auto;
+    }
+    .cars-slider .btn:first-child{
+        display: none;
+    }
+    .slick-prev{
+        display: none;
+    }
+    .services-item{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .services-item span{
+        margin-right: 0;
+        margin: 20px 0;
+    }
+    section h2{
+        font-size: 18px;
+        padding: 0;
+    }
+    .better-item{
+        text-align: center;
+    }
+    .features-title{
+        font-size: 14px;
+    }
+    .features-num{
+        font-size: 18px;
+    }
+    .better-item__text{
+        font-size: 14px;
+    }
+    .logo{
+        font-size: 22px;
+    }
+    .offer h3{
+        font-size: 20px;
+    }
+    .offer p{
+        font-size: 14px;
+    }
+    .main-btn{
+        font-size: 14px;
+    }
+    .features-wrap{
+        margin-top: 30px;
+    }
+    section{
+        padding: 20px 0;
+    }
+    .section-nav__btn {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 460px){
+    .faq-item.active{
+        height: 56vw;
+    }
+    .faq-item{
+        height: 24vw;
+        font-size: 14px;
+        padding: 20px 30px;
+    }
+}
+@media (max-width: 400px){
+    .faq-item.active{
+        height: 70vw;
+    }
+    .faq-item{
+        height: 30vw;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
