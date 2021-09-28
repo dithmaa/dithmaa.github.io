@@ -1,0 +1,94 @@
+*,*:after,*:before{
+    box-sizing: border-box;
+}
+body,html{
+    padding: 0;
+    margin: 0;
+}
+.field{
+    width: 100%;
+    height: 100vh;
+    background: url(https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-wallpapers-41-1024x576.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+.field > *{
+    z-index: 20;
+}
+.amongus{
+    position: absolute;
+    top: 300px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid turquoise;
+    z-index: 99;
+}
+.amongus img{
+    width: 100%;
+}
+.thirst-bar{
+    width: 200px;
+    height: 40px;
+    outline: lime 1px solid;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    color: #fff;
+    z-index: 99;
+}
+span{
+    width: 100%;
+    height: 100%;
+    background-color: lime;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .25s ease all;
+}
+.bottle{
+  position: absolute;
+  top: 600px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+}
+.bottle-btn{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  color: #fff;
+  cursor: pointer;
+}
+.bottle-btn img{
+  width: 100%;
+}
+.bottle-btn p {
+  margin-left: 15px;
+}
+.again{
+  position: absolute;
+  left: 100px;
+  top: 500px;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 100px;
+    color: #fff;
+    padding: 20px;
+    top: 20px;
+    background-color: blue;
+    z-index: 99;
+}
+.overflow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 10;
+    opacity: 0.3;
+}
