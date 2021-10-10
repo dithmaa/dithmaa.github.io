@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симулятор пустыни - Уровень 13</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/flex.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body>
+ 
+    <div class="field">
+        
+        <div class="box">
+            <div class="amongus">
+                <div class="amongus-img">
+                    <img src="../img/wonder-day-among-us-19.png" alt="">
+                </div>
+            </div>
+            <div class="bottle">
+                <div class="bottle-btn">
+                  <img src="../img/water.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="indicator">
+            <div class="thirst-bar indicator-bar">
+                <span class="bar thirst-line"></span>
+            </div>
+            <div class="blood-bar indicator-bar">
+                <span class="bar blood-line"></span>
+            </div>
+            <div class="chest-amount">
+
+                <span class="chest-amount-num"></span> 
+                <div class="chest-amount-img"><img src="../img/chest.png" alt="shest"></div>
+            </div>
+            <!-- <button class="soundOn"">Включить звук</button> -->
+        </div>
+        <!-- <div class="gameover" >
+            <button class="again">Начать игру заного</button>
+
+        </div> -->
+
+    
+        
+    <script>chestAmount = 13;
+    enemyAmount = 9;
+    function createEnemy(){
+    for(var i = 0; i < enemyAmount; i++){
+        var enemy = document.createElement('div');
+        var enemyPicture = document.createElement('div');
+        var enemyImg = document.createElement('img');
+        var box = document.querySelector('.box');
+
+        enemy.classList.add('enemy');
+        enemyPicture.classList.add('enemy-picture');
+        
+
+        enemyImg.src = '../img/enemy.png';
+        enemyPicture.append(enemyImg);
+        enemy.append(enemyPicture);
+        box.append(enemy);
+
+        
+    }
+    
+
+    return "Читы включены";  
+}
+
+function randomEnemy(){
+    for(var k = 0; k < enemyAmount; k++){
+        var enemyId = document.getElementsByClassName('enemy');
+
+        var enemyRandomPosY = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
+        var enemyRandomPosX = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
+        enemyId[k].style.top = enemyRandomPosY + "px";
+        enemyId[k].style.left = enemyRandomPosX + "px";
+    }
+}
+    //PLAY AGAIN
+function gameAgain(){   
+
+
+let mainPopup = document.querySelector(".main-popup");
+let overflow = document.querySelector(".overflow");
+let field = document.querySelector('.field');
+
+field.removeChild(mainPopup);
+field.removeChild(overflow);
+// bar.innerHTML = "";
+bar.style.width = thirst + "%";
+thirst = 100;
+blood = 100;
+thirstInterval = setInterval(thirstDecrease,70);
+bloodInterval = setInterval(bloodIncrease,400);
+
+bottle.style.opacity = 1;
+let amongus = document.querySelector(".amongus");
+amongus.style.top = 250 + "px";
+amongus.style.left = 250 + "px";
+randomBottle();
+for(var p = 0; p < 3; p++){
+    var enemyId = document.getElementsByClassName('enemy');
+    var enemyPicture = document.getElementsByClassName('enemy-picture');
+    enemyId[p].style.background = "rgba(255, 0, 0, .514)";
+    enemyPicture[p].style.opacity = 1;
+    enemyPicture[p].style.width = 60 + "px";
+    enemyPicture[p].style.height = 60 + "px";
+}
+randomEnemy();
+}
+
+    </script>
+    
+    <script src="../js/game.js"></script>
+
+    <script>
+        
+    thirstInterval = setInterval(thirstDecrease,70);
+    </script>
+    
+</body>
+</html>
