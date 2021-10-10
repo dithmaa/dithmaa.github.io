@@ -10,17 +10,67 @@ let again = document.createElement('button');
 again.innerHTML = "Начать игру заного";
 again.classList.add('again');
 
+let next = document.createElement('button');
+next.innerHTML = "Следующий уровень";
+next.classList.add('next');
+var indicator = document.querySelector('.indicator');
+indicator.append(chestAmount + " уровень");
+
+var amountTry = 3;
+var enemyAmount;
+function heartDraw(){
+    
+    var heartBox = document.createElement('div');
+    heartBox.classList.add('heart-box');
+    for(var d = 0; d < amountTry; d++){
+        var heart = document.createElement('div');
+        heart.classList.add('heart');
+        var heartImg = document.createElement('img');
+        heartImg.src = "../img/heart.png";
+        heart.append(heartImg);
+        heartBox.append(heart);
+        var indicator = document.querySelector('.indicator');
+        indicator.append(heartBox);
+    }
+}
+heartDraw();
 
 
+var swallow = new Audio();
+swallow.src = "../sounds/swallow-sound.wav";
 
+var pain = new Audio();
+pain.src = "../sounds/painful.wav";
+
+var bottleAppear = new Audio();
+bottleAppear.src = "../sounds/appearItem.wav";
+
+var steps = new Audio();
+steps.src = "../sounds/step.wav";
+
+var bgmusic = new Audio();
+bgmusic.src = "../sounds/music.wav";
+
+// window.onload = function(){
+//     bgmusic.play();
+// }
+
+function soundOn(){
+    setInterval(function(){
+        bgmusic.play();
+    },0);
+}
+function musicPause(){
+    bgmusic.pause();
+}
 var move = function move(e){
-
     
     
     let k = e.keyCode,
         amongusId = document.querySelector(".amongus"),
         amongus = {
             updown: function(){
+                
                 let y = parseInt(getComputedStyle(amongusId).top);
 
                 
@@ -29,7 +79,7 @@ var move = function move(e){
 
                 
 
-                if(document.querySelector('.gameover')){
+                if(document.querySelector('.main-popup')){
                     k = 0;
                 }
                 
@@ -39,12 +89,14 @@ var move = function move(e){
                     if(y < 10){
                         y = 10;
                     }
+                    steps.play();
                 } else if(k == 83 || k == 40){
                     y+=10;
 
                     if(y > 490){
                         y = 490;
                     }
+                    steps.play();
                 } 
                 
                 return y;
@@ -57,11 +109,13 @@ var move = function move(e){
                     if(x < 10){
                         x = 10;
                     }
+                    steps.play();
                 } else if(k == 68 || k == 39){
                     x+=10;
                     if(x > 490){
                         x = 490;
                     }
+                    steps.play();
                 }
                 return x;
             },
@@ -73,13 +127,131 @@ var move = function move(e){
     amongusId.style.top = (amongus.updown()) + "px";
     amongusId.style.left = (amongus.leftright()) + "px";
     
-
+        
 
     let bottlePosY = parseInt(getComputedStyle(bottle).top);
     let amongPosY = parseInt(getComputedStyle(amongusId).top);
     let bottlePosX = parseInt(getComputedStyle(bottle).left);
     let amongPosX = parseInt(getComputedStyle(amongusId).left);
 
+    //Chest collision
+    var chestId = document.getElementsByClassName('chest');
+    var chestPicture = document.getElementsByClassName('chest-picture');
+
+    for(var collisionN = 0; collisionN < chestAmount; collisionN++){
+
+        
+        
+        var chestPosY = parseInt(getComputedStyle(chestId[collisionN]).top);
+        var chestPosX = parseInt(getComputedStyle(chestId[collisionN]).left);
+
+        if(chestPosY == amongPosY && chestPosX == amongPosX){
+
+            
+                    
+            
+            
+            //increase
+            chestHas++;
+            chestAmountNum.innerHTML = chestHas + "/" + chestAmount;  
+
+            console.log("Сколько сундуков на карте: " + chestAmount);
+            console.log("Сколько сундуков уже собрано: " + chestHas);
+
+            if(chestAmount == chestHas){
+                console.log("Все сундуки собраны");
+                if(blood == 0){
+                    setTimeout(function(){
+                        clearInterval(bloodInterval);
+                    },620);
+                }
+                    
+                
+                
+                clearInterval(thirstInterval);
+
+                win();
+                let next = document.querySelector('.next');
+                next.addEventListener('click',function(){
+                    console.log(chestAmount);
+                    var x = chestAmount;
+                    switch(x) {
+                        case 1: 
+                            window.location.href = "two.html";
+                            break;
+                        case 2: 
+                            window.location.href = "three.html";
+                            break;
+                        case 3: 
+                            window.location.href = "four.html";
+                            break;
+                        case 4: 
+                            window.location.href = "five.html";
+                            break;
+                        case 5: 
+                            window.location.href = "six.html";
+                            break;
+                        case 6: 
+                            window.location.href = "seven.html";
+                            break;
+                        case 7: 
+                            window.location.href = "eight.html";
+                            break;
+                        case 8: 
+                            window.location.href = "nine.html";
+                            break;
+                        case 9: 
+                            window.location.href = "ten.html";
+                            break;
+                        case 10: 
+                            window.location.href = "eleven.html";
+                            break;
+                        case 11: 
+                            window.location.href = "twelve.html";
+                            break;
+                        case 12: 
+                            window.location.href = "thirteen.html";
+                            break;
+                        case 13: 
+                            window.location.href = "fourteen.html";
+                            break;
+                        case 14: 
+                            window.location.href = "fifteen.html";
+                            break;
+                        default:
+                            window.location.href = "../index.html";
+                        
+                    }
+                });
+
+
+
+            }
+
+            //animation
+            chestId[collisionN].style.left = 800 + "px";
+            chestId[collisionN].style.background = "rgba(255, 0, 0, 0)";
+            chestId[collisionN].style.borderColor = "rgba(255, 0, 0, 0)";
+
+            chestPicture[collisionN].style.height = 100 + "px";
+            chestPicture[collisionN].style.width = 100 + "px";
+            var chestPictureThis = chestPicture[collisionN];
+
+            let amongus = document.querySelector('.amongus');
+            amongus.style.background = "rgba(0, 255, 34, 500)";
+            
+            amongus.style.borderColor = "rgba(0, 255, 34, 500)";
+            setTimeout(function(){
+                amongus.style.background = "rgba(255, 0, 0, 0)";
+                amongus.style.borderColor = "rgba(64, 224, 208, 0.589)";
+                
+            },200);
+            setTimeout(function(){
+                chestPictureThis.style.opacity = 0;
+                
+            },200);
+        }
+    }
 
     
     for(var j = 0; j < 3; j++){
@@ -117,9 +289,9 @@ var move = function move(e){
             },200);
 
             let enemyStyle = document.getElementsByClassName('enemy');
-            enemyStyle1 = parseInt(getComputedStyle(enemyStyle[0]).left);
-            enemyStyle2 = parseInt(getComputedStyle(enemyStyle[1]).left);
-            enemyStyle3 = parseInt(getComputedStyle(enemyStyle[2]).left);
+            var enemyStyle1 = parseInt(getComputedStyle(enemyStyle[0]).left);
+            var enemyStyle2 = parseInt(getComputedStyle(enemyStyle[1]).left);
+            var enemyStyle3 = parseInt(getComputedStyle(enemyStyle[2]).left);
             if(enemyStyle1 == 800 && enemyStyle2 == 800 && enemyStyle3 == 800){
                 setTimeout(function(){
                     for(var s = 0; s < 3; s++){
@@ -204,12 +376,14 @@ var move = function move(e){
 
 
 
-
 //RANDOM BOTTLE
 randomBottle();
 
 function randomBottle(){
 
+   
+
+    // bottleAppear.play();
 
     var bottleRandomPosY = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
     var bottleRandomPosX = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
@@ -219,10 +393,7 @@ function randomBottle(){
     bottle.style.top = bottleRandomPosY + "px";
     bottle.style.left = bottleRandomPosX + "px";
 
-    var bottleAppear = new Audio();
-    bottleAppear.src = "sounds/waterAppear.mp3";
-
-    bottleAppear.play();
+    
 
 
 }
@@ -234,6 +405,23 @@ function randomBottle(){
 //GAMEOVER
 
 function gameover(){
+    var heartLast = document.querySelector('.heart-box');
+    var indicators = document.querySelector('.indicator');
+    var amongCarnage = document.querySelector('.amongus');
+    indicators.removeChild(heartLast);
+    amountTry--;
+    heartDraw();
+    console.log("Осталось "+amountTry+" попыток");
+
+    if(amountTry <= 0){
+        window.location.href = "../index.html";
+    } else if(amountTry == 1){
+        // amongCarnage.style.backgroundColor = "red";
+        var carnageColor = document.createElement('div');
+        carnageColor.classList.add('carnage-color');
+        amongCarnage.append(carnageColor);
+
+    } 
     console.log("Игра закочена");
     
 
@@ -243,6 +431,7 @@ function gameover(){
         overflow = document.createElement('div');
         overflow.classList.add('overflow');
         gameover.classList.add('gameover');
+        gameover.classList.add('main-popup');
         gameoverTitle.append("Вы проиграли");
         gameover.append(gameoverTitle);
         gameover.append(again);
@@ -250,38 +439,23 @@ function gameover(){
         field.append(gameover);
     
 }
-
-//PLAY AGAIN
-function gameAgain(){   
-
-
-    let gameover = document.querySelector(".gameover");
-    let overflow = document.querySelector(".overflow");
-    let field = document.querySelector('.field');
+function win(){
+    console.log("Победа");
     
-    field.removeChild(gameover);
-    field.removeChild(overflow);
-    // bar.innerHTML = "";
-    bar.style.width = thirst + "%";
-    thirst = 100;
-    blood = 100;
-    thirstInterval = setInterval(thirstDecrease,300);
-    bloodInterval = setInterval(bloodIncrease,400);
 
-    bottle.style.opacity = 1;
-    let amongus = document.querySelector(".amongus");
-    amongus.style.top = 250 + "px";
-    amongus.style.left = 250 + "px";
-    randomBottle();
-    for(var p = 0; p < 3; p++){
-        var enemyId = document.getElementsByClassName('enemy');
-        var enemyPicture = document.getElementsByClassName('enemy-picture');
-        enemyId[p].style.background = "rgba(255, 0, 0, .514)";
-        enemyPicture[p].style.opacity = 1;
-        enemyPicture[p].style.width = 60 + "px";
-        enemyPicture[p].style.height = 60 + "px";
-    }
-    randomEnemy();
+    bottle.style.opacity = 0;
+    var win = document.createElement('div'), 
+        winTitle = document.createElement('h2'), 
+        overflow = document.createElement('div');
+        overflow.classList.add('overflow');
+        win.classList.add('win');
+        win.classList.add('main-popup');
+        winTitle.append("Вы выиграли");
+        win.append(winTitle);
+        win.append(next);
+        field.append(overflow);
+        field.append(win);
+    
 }
 
 
@@ -289,7 +463,7 @@ function gameAgain(){
 
 bar.style.width = thirst + "%";
 
-thirstInterval = setInterval(thirstDecrease,300);
+
 
 
 
@@ -329,54 +503,61 @@ function bloodIncrease(){
 
 
 
-
-
 //CREATE ENEMYS
 
 
 createEnemy();
 randomEnemy();
 
-function createEnemy(){
-    for(var i = 0; i < 3; i++){
-        var enemy = document.createElement('div');
-        var enemyPicture = document.createElement('div');
-        var enemyImg = document.createElement('img');
-        var box = document.querySelector('.box');
 
-        enemy.classList.add('enemy');
-        enemyPicture.classList.add('enemy-picture');
-        
-
-        enemyImg.src = 'img/enemy.png';
-        enemyPicture.append(enemyImg);
-        enemy.append(enemyPicture);
-        box.append(enemy);
-
-        
-    }
-    
-
-    return "Читы включены";  
-}
-function randomEnemy(){
-    for(var k = 0; k < 3; k++){
-        var enemyId = document.getElementsByClassName('enemy');
-
-        var enemyRandomPosY = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
-        var enemyRandomPosX = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
-        enemyId[k].style.top = enemyRandomPosY + "px";
-        enemyId[k].style.left = enemyRandomPosX + "px";
-    }
-}
 
 //KEYDOWN MOVE
 document.addEventListener("keydown", move);
 
 
-var swallow = new Audio();
-swallow.src = "sounds/swallow-sound.wav";
 
-var pain = new Audio();
-pain.src = "sounds/pain-sound.wav";
+//Chest initialize
+var chestAmountRandom = chestAmount;
+var chestHas = 0;
+//Create chests
+function createChest(){
+    for(var chestN = 0; chestN < chestAmount; chestN++){
+        var chest = document.createElement('div');
+        var chestPicture = document.createElement('div');
+        var chestImg = document.createElement('img');
+        var box = document.querySelector('.box');
+
+        chest.classList.add('chest');
+        chestPicture.classList.add('chest-picture');
+        
+
+        chestImg.src = '../img/chest.png';
+        chestPicture.append(chestImg);
+        chest.append(chestPicture);
+        box.append(chest);
+
+        
+    }
+    
+}
+createChest();
+
+//Random chests
+
+function randomChest(){
+   
+    for(var chestRandomN = 0; chestRandomN < chestAmountRandom; chestRandomN++){
+        var chestId = document.getElementsByClassName('chest');
+
+        var chestRandomPosY = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
+        var chestRandomPosX = (Math.round(Math.random() * (9 - 1) + 1) ) * 50;
+        chestId[chestRandomN].style.top = chestRandomPosY + "px";
+        chestId[chestRandomN].style.left = chestRandomPosX + "px";
+    }
+}
+randomChest();
+
+//Chest amount 
+var chestAmountNum = document.querySelector('.chest-amount-num');
+chestAmountNum.innerHTML = chestHas + "/" + chestAmount;       
 
