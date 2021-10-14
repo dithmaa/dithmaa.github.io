@@ -1,0 +1,77 @@
+*,*:after,*:before{
+  box-sizing: border-box;
+}
+.res{
+  font-size: 49px;
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  .grid{
+    position: absolute;
+    width: 358px;
+    height: 363px;
+    /* outline: 2px solid blue; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .popit{
+    
+    background: url('popi.png');
+    width: 400px;
+    height: 400px;
+    background-size: 100%;
+    background-position: center center;
+    margin: 30px;
+    /* display: flex;
+    flex-wrap: wrap; */
+    position: relative;
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* padding: 13px; */
+  }
+  .cell{
+    /* visibility: hidden; */
+    width: 56px;
+    height: 61px;
+    /* outline: 1px solid orange; */
+    cursor: pointer;
+    background: url('button.png');
+    /* background-repeat: no-repeat; */
+    background-size: 107%;
+    background-position: center center;
+    /* opacity: 0; */
+    border-radius: 10px;
+    opacity: 0;
+
+  }
+  .cell:after{
+    content: '';
+  }
+  .cell.active{
+    background: url('act.png');
+    background-size: 107%;
+    background-position: center center;
+    opacity: 1;
+    opacity: 0.8;
+  }
+.res{
+  padding: 10px 20px;
+}
+.res.is-purple{
+  background:rgb(102, 25, 175);
+  color: #fff;
+  border-radius: 15px;
+  /* font-weight: bold; */
+}
