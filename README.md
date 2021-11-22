@@ -2,7 +2,7 @@
 
 ## Вёрстка
 
-1. Вёрстка сайта для SeoPro: [seopro.group](https://seopro.group/) <br> (Артём Буняшин из SeoPro давал интервью на канале ЛюдиПро : [youtu.be/2MYNO9tc9FM](https://youtu.be/2MYNO9tc9FM) <br>
+1. Вёрстка сайта для SeoPro: [seopro.group](https://seopro.group/) <br> (Артём Буняшин из SeoPro давал интервью на канале ЛюдиПро) : [youtu.be/2MYNO9tc9FM](https://youtu.be/2MYNO9tc9FM) <br>
 3. Вёрстка сайта для "Этикетов для доставки": [365basicsolution.com](http://365basicsolutions.com/) <br> (Делал для партнёров SeoPro)  <br>
 4. Вёрстка сайта для Авторского Клуба: [dithmaa.github.io/author-club](https://dithmaa.github.io/author-club) <br> (Знакомый Артёма из SeoPro)
 5. Доработка вёрстки формы для: [Ico Cryptocurrency](http://buddy4body.ru/) <br> (получил опыт работы с docker, docker-compose, gitlab)
