@@ -1,2 +1,1 @@
-# Александр Холод
-Мой первый сайт
+Вёрстка сайта Mobile First: https://dithmaa.github.io/evromed/
