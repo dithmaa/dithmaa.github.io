@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Medium.eot');
+    src: url('../fonts/subset-CocogooseClassic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Medium.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Medium.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Medium.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Medium.svg#CocogooseClassic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Thin.eot');
+    src: url('../fonts/subset-CocogooseClassic-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Thin.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Thin.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Thin.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Thin.svg#CocogooseClassic-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-ExtraLight.eot');
+    src: url('../fonts/subset-CocogooseClassic-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-ExtraLight.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-ExtraLight.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-ExtraLight.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-ExtraLight.svg#CocogooseClassic-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Black.eot');
+    src: url('../fonts/subset-CocogooseClassic-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Black.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Black.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Black.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Black.svg#CocogooseClassic-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-BoldItalic.eot');
+    src: url('../fonts/subset-CocogooseClassic-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-BoldItalic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-BoldItalic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-BoldItalic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-BoldItalic.svg#CocogooseClassic-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-ExtraBoldIt.eot');
+    src: url('../fonts/subset-CocogooseClassic-ExtraBoldIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-ExtraBoldIt.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-ExtraBoldIt.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-ExtraBoldIt.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-ExtraBoldIt.svg#CocogooseClassic-ExtraBoldIt') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-ExtraLightIt.eot');
+    src: url('../fonts/subset-CocogooseClassic-ExtraLightIt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-ExtraLightIt.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-ExtraLightIt.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-ExtraLightIt.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-ExtraLightIt.svg#CocogooseClassic-ExtraLightIt') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-LightItalic.eot');
+    src: url('../fonts/subset-CocogooseClassic-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-LightItalic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-LightItalic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-LightItalic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-LightItalic.svg#CocogooseClassic-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Italic.eot');
+    src: url('../fonts/subset-CocogooseClassic-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Italic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Italic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Italic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Italic.svg#CocogooseClassic-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-ExtraBold.eot');
+    src: url('../fonts/subset-CocogooseClassic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-ExtraBold.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-ExtraBold.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-ExtraBold.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-ExtraBold.svg#CocogooseClassic-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-BlackItalic.eot');
+    src: url('../fonts/subset-CocogooseClassic-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-BlackItalic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-BlackItalic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-BlackItalic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-BlackItalic.svg#CocogooseClassic-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Light.eot');
+    src: url('../fonts/subset-CocogooseClassic-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Light.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Light.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Light.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Light.svg#CocogooseClassic-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-MediumItalic.eot');
+    src: url('../fonts/subset-CocogooseClassic-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-MediumItalic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-MediumItalic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-MediumItalic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-MediumItalic.svg#CocogooseClassic-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-ThinItalic.eot');
+    src: url('../fonts/subset-CocogooseClassic-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-ThinItalic.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-ThinItalic.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-ThinItalic.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-ThinItalic.svg#CocogooseClassic-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Bold.eot');
+    src: url('../fonts/subset-CocogooseClassic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Bold.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Bold.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Bold.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Bold.svg#CocogooseClassic-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cocogoose Classic';
+    src: url('../fonts/subset-CocogooseClassic-Regular.eot');
+    src: url('../fonts/subset-CocogooseClassic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-CocogooseClassic-Regular.woff2') format('woff2'),
+        url('../fonts/subset-CocogooseClassic-Regular.woff') format('woff'),
+        url('../fonts/subset-CocogooseClassic-Regular.ttf') format('truetype'),
+        url('../fonts/subset-CocogooseClassic-Regular.svg#CocogooseClassic-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
