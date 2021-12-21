@@ -71,6 +71,10 @@ p{
     font-size: 20px;
     margin-top: 60px;
 }
+.offer-contacts a {
+    text-decoration: none;
+    color: inherit;
+}
 .offer-item img{
     width: 102%;
     height: 102%;
