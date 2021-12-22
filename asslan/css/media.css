@@ -12,7 +12,7 @@
         margin-top: 40px;
     }
     section{
-        padding: 20px 0;
+        padding: 30px 0;
     }
     .services-item{
         margin: 15px 0;
@@ -39,15 +39,17 @@
         display: flex;
         position: absolute;
         width: 100%;
-        background-color: #f9fbff;
+        background-color: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
         transform: translateX(-100%);
         z-index: 99;
         text-align: center;
         padding: 60px 0;
         left: 0;
-        top: 132px;
+        top: 100px;
         transition: .25s ease all;
         opacity: 1;
+        padding-bottom: 180px;
     }
     .menu-mobile.active{
         transform: translateX(0);
@@ -81,7 +83,10 @@
         font-size: 16px;
     }
     h1,h2{
-        font-size: 24px;
+        font-size: 28px;
+    }
+    .about {
+        padding-top: 54px;
     }
     .about p{
         font-size: 18px;
@@ -108,5 +113,8 @@
     }
     .main-button{
         padding: 10px 23px;
+    }
+    .offer-contacts a {
+        font-size: 16px;
     }
 }
