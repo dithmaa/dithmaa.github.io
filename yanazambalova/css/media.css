@@ -10,6 +10,10 @@
     }
 }
 @media (max-width: 992px){
+    .services-item{
+        flex-direction: column;
+        padding: 30px 0;
+    }
     body{
         font-size: 20px;
     }
@@ -19,21 +23,15 @@
     .top-nav{
         padding: 20px 0;
     }
-    .offer{
-        margin-top: 40px;
-    }
+    
     section{
         padding: 30px 0;
     }
-    .services-item{
-        margin: 15px 0;
-    }
+    
     .main-button{
         font-size: 18px;
     }
-    .offer-item{
-        padding-top: 116px;
-    }
+    
     .top-nav{
         position: relative;
     }
@@ -43,9 +41,7 @@
     .about p{
         font-size: 20px;
     }
-    .contacts-info a{
-        font-size: 26px;
-    }
+    
     .menu-mobile{
         display: flex;
         position: absolute;
@@ -73,28 +69,15 @@
         display: block;
         opacity: 0.8;
     }
-    .offer .container {
-        justify-content: center;
-    }
-    .offer-item:first-child{
-        display: none;
-    }
-    .offer-item{
-        padding-left: 0;
-        text-align: center;
-    }
+
     .main p{
         font-size: 20px;
     }
-    .about{
-        background: rgb(17, 17, 17);
-    }
+    
     .about-image img{
         width: 400px;
     }
-    .about h2{
-        color: #c0c0c0;
-    }
+    
     .about p {
         font-size: 18px;
         line-height: 30px;
@@ -102,10 +85,29 @@
     .about-text{
         padding-top: 40px;
     }
+    .about {
+        padding-bottom: 0;
+    }
 }
 @media (max-width: 768px){
-    .top-nav .info{
-        display: none;
+    .services-number{
+        margin: 0 30px;
+        font-size: 20px;
+    }
+    .services-action{
+        font-size: 16px;
+    }
+    .services-item{
+        padding: 40px;
+    }
+    .services-content h3{
+        font-size: 24px;
+    }
+    .services-content p{
+        font-size: 18px;
+    }
+    .services {
+        padding-top: 5px;
     }
     h1,h2 {
         font-size: 38px;
@@ -128,8 +130,41 @@
         margin-top: 0;
         padding-top: 0;
     }
+    
 }
 @media (max-width: 596px){
+    .header{
+        height: 610px;
+    }
+    .top-nav__action{
+        right: -24px;
+    }
+    .top-nav__action img{
+        width: 80px;
+    }
+    .services-number{
+        display: none;
+    }
+    .services-item{
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .services-content{ 
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .services-content h3{
+        font-size: 18px;
+    }
+    .services-content p{
+        font-size: 16px;
+    }
+    .services-action{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
     .main-arrow img{
         width: 30px;
     }
@@ -162,16 +197,8 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .contacts-info a{
-        font-size: 20px;
-    }
-    .services-icon{
-        display: none;
-    }
-    .offer-item{
-        padding-top: 50px;
-        height: 386px;
-    }
+    
+    
     .hamburger-inner, .hamburger-inner:after, 
     .hamburger-inner:before{
         width: 26px;
@@ -182,9 +209,7 @@
         padding-bottom: 20px;
         font-size: 14px;
     }
-    .offer-contacts a {
-        font-size: 16px;
-    }
+    
 }
 
 @media (max-width: 400px){

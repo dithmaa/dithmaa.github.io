@@ -9,8 +9,21 @@ hamburgerButton.addEventListener('click', ()=>{
 	topNav.classList.toggle('active');
 })
 
+$('.popup-close').on('click',function(e){
+    $('.popup-info').removeClass('is-active');
+    $('.overflow').removeClass('is-active');
+  });
 
-$(".menu, .menu-mobile").on("click","a", function (event) {
+  for(let i = 1; i <= 10; i++){
+
+    $(" #product"+i+" ").on('click',function(){
+      $("#popup"+i+" .popup").addClass('is-active');
+      $('.overflow').addClass('is-active');
+    });
+
+  }
+
+$(".menu, .menu-mobile, .main-bottom").on("click","a", function (event) {
 	//отменяем стандартную обработку нажатия по ссылке
 	event.preventDefault();
 	//забираем идентификатор бока с атрибута href
