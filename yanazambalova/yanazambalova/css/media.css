@@ -1,0 +1,219 @@
+@media (max-width: 1200px){
+    .about-image img{
+        width: 500px;
+    }
+    .about {
+        padding-bottom: 60px;
+    }
+    .about-text{
+        font-size: 20px;
+    }
+}
+@media (max-width: 992px){
+    .services-item{
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    body{
+        font-size: 20px;
+    }
+    h1,h2{
+        font-size: 44px;
+    }
+    .top-nav{
+        padding: 20px 0;
+    }
+    
+    section{
+        padding: 30px 0;
+    }
+    
+    .main-button{
+        font-size: 18px;
+    }
+    
+    .top-nav{
+        position: relative;
+    }
+    .top-nav .menu{
+        display: none;
+    }
+    .about p{
+        font-size: 20px;
+    }
+    
+    .menu-mobile{
+        display: flex;
+        position: absolute;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        transform: translateX(-100%);
+        z-index: 99;
+        text-align: center;
+        padding: 60px 0;
+        left: 0;
+        top: 98px;
+        transition: .25s ease all;
+        opacity: 1;
+        padding-bottom: 180px;
+    }
+    .menu-mobile.active{
+        transform: translateX(0);
+    }
+    .menu-mobile li{
+        margin: 0;
+        margin: 20px 0;
+    }
+    .top-nav__hamburger{
+        display: block;
+        opacity: 0.8;
+    }
+
+    .main p{
+        font-size: 20px;
+    }
+    
+    .about-image img{
+        width: 400px;
+    }
+    
+    .about p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .about-text{
+        padding-top: 40px;
+    }
+    .about {
+        padding-bottom: 0;
+    }
+}
+@media (max-width: 768px){
+    .services-number{
+        margin: 0 30px;
+        font-size: 20px;
+    }
+    .services-action{
+        font-size: 16px;
+    }
+    .services-item{
+        padding: 40px;
+    }
+    .services-content h3{
+        font-size: 24px;
+    }
+    .services-content p{
+        font-size: 18px;
+    }
+    .services {
+        padding-top: 5px;
+    }
+    h1,h2 {
+        font-size: 38px;
+    }
+    .main p {
+        font-size: 18px;
+    }
+    .main-button{
+        font-size: 18px;
+    }
+    .main-action .main-button:last-child{
+        display: none;
+    } 
+    .about .container:last-child{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-text{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
+}
+@media (max-width: 596px){
+    .header{
+        height: 610px;
+    }
+    .top-nav__action{
+        right: -24px;
+    }
+    .top-nav__action img{
+        width: 80px;
+    }
+    .services-number{
+        display: none;
+    }
+    .services-item{
+        text-align: center;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .services-content{ 
+        padding-right: 0;
+        margin-right: 0;
+    }
+    .services-content h3{
+        font-size: 18px;
+    }
+    .services-content p{
+        font-size: 16px;
+    }
+    .services-action{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .main-arrow img{
+        width: 30px;
+    }
+    .header {
+        background-image: url('../img/main/background-mobile.jpg');
+        background-position: center center;
+    }
+   
+    .main p {
+        font-size: 14px;
+        padding-right: 100px;
+    }
+    .main p br{
+        display: none;
+    }
+    body{
+        font-size: 16px;
+    }
+    h1,h2{
+        font-size: 28px;
+    }
+    .about {
+        padding-top: 54px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    .main-button{
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    
+    .hamburger-inner, .hamburger-inner:after, 
+    .hamburger-inner:before{
+        width: 26px;
+        height: 2px;
+    }
+    .main-button{
+        padding: 16px 34px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+    
+}
+
+@media (max-width: 400px){
+    .header{
+        background-image: url('../img/main/background-gauss.jpg');
+    }
+}
