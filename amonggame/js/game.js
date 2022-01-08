@@ -333,6 +333,8 @@ var move = function move(e){
 
     
     if(bottlePosY == amongPosY  && bottlePosX == amongPosX){
+        // alert('colision');
+
         swallow.play();
         thirst+=30;
         console.log("Ням");
@@ -560,4 +562,3 @@ randomChest();
 //Chest amount 
 var chestAmountNum = document.querySelector('.chest-amount-num');
 chestAmountNum.innerHTML = chestHas + "/" + chestAmount;       
-

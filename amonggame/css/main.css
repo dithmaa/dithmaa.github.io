@@ -5,6 +5,18 @@ body,html{
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    background: url('../img/mainbg.png');
+
+}
+.box{
+  box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+  border-radius: 10px;
+}
+.indicator{
+  background-color: rgb(226, 226, 226);
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 50px rgba(0,0,0,.3);
 }
 .field{
     width: 100%;
@@ -12,8 +24,8 @@ body,html{
     /* background: url(https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-wallpapers-41-1024x576.jpg) no-repeat center center; */
     background-size: cover;
     position: relative;
-    background-color: rgb(195, 219, 255);
-}
+    /* background-size: cover; */
+  }
 .field > *{
     /* z-index: 10; */
 }
@@ -23,7 +35,7 @@ body,html{
     left: 250px;
     width: 100px;
     height: 100px;
-    border: 1px solid rgba(64, 224, 208, 0.589);
+    border: 2px dashed rgba(132, 0, 184, 0.589);
     border-radius: 100px;
     z-index: 99;
     display: flex;
@@ -70,7 +82,7 @@ body,html{
 }
 .indicator-bar{
   margin: 10px 0;
-    width: 200px;
+    width: 160px;
     height: 40px;
     position: relative;
     color: #fff;
@@ -105,9 +117,58 @@ body,html{
   align-items: center;
   border: 1px solid rgba(64, 224, 208, 0.589);
   border-radius: 100px;
-  background-color: rgba(64, 224, 208, 0.2);
+  background-color: rgba(64, 224, 208, 0.4);
   transition: .25s ease border;
   z-index: 2;
+  animation: pulseBG 3s ease infinite;
+}
+.bottle-btn{
+  transform: scale(.8);
+  animation: pulse 3s ease infinite;
+}
+@keyframes pulse{
+  0% {
+    transform: scale(.8);
+  }
+  50%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(.8);
+  }
+}
+@keyframes pulseBG{
+  0% {
+    background-color: rgba(64, 224, 208, 0.2);
+  }
+  50%{
+    background-color: rgba(64, 224, 208, 0.4);
+  }
+  100%{
+    background-color: rgba(64, 224, 208, 0.2);
+  }
+}
+@keyframes pulseOpacity{
+  0% {
+    opacity: 0.4;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.4;
+  }
+}
+@keyframes pulseBG{
+  0% {
+    background-color: rgba(64, 224, 208, 0.2);
+  }
+  50%{
+    background-color: rgba(64, 224, 208, 0.4);
+  }
+  100%{
+    background-color: rgba(64, 224, 208, 0.2);
+  }
 }
 .bottle:after{
   content: '';
@@ -207,6 +268,8 @@ body,html{
   top: 0;
   right: 0;
   z-index: 1;
+  animation: pulseOpacity 3s ease infinite;
+  opacity: 0.4;
 }
 .enemy-picture{
   width: 60px;
@@ -311,7 +374,14 @@ body,html{
   width: 100%;
 }
 .chest-amount{
-  margin-top: 30px;
+  border-top: 1px solid rgb(185, 185, 185);
+  margin-top: 15px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.chest-amount-img{
+  margin-left: 10px;
 }
 .carnage-color{
   position: absolute;
@@ -320,4 +390,57 @@ body,html{
   background: rgba(255, 0, 0, 0.314);
   border-radius: 100px;
   z-index: 4;
+}
+
+.alife-enemy{
+  width: 100px;
+  height: 100px;
+  background: url(https://pngimg.com/uploads/spider/spider_PNG20.png);
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 136, 0, 0.337); 
+  border: 1px solid rgba(255, 136, 0, 1);
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transition: 5s ease all; 
+}
+.welcome.is-hide{
+  display: none;
+}
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: url('../img/mainbg.jpg');
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.welcome-block{
+  background-color: #fff;
+  box-shadow: 1px 1px 30px rgba(255,255,255,.5);
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px 40px;
+  padding-bottom: 40px;
+  margin-top: 20vh;
+}
+.welcome-btn{
+  background-color: rgb(81, 255, 0);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.welcome-btn:hover {
+  opacity: 0.5;
 }

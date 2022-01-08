@@ -4,3 +4,13 @@
         margin-left: auto;
     }
 }
+@media(max-width: 768px){
+    .box{
+        transform: scale(.7);
+        z-index: 999;
+        }
+    .indicator{
+        top: 0px;
+        transform: scale(.7);
+    }
+}
