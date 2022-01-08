@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <div class="welcome">
+        <div class="welcome-block">
+            <h2>Симулятор пустыни</h2>
+            <p>Чтобы пройти уровень, вам нужно собрать все сундуки. С каждым уровнем количество врагов и сундуков увеличивается, а жажда лишь только усиливается. Поэтому, чтобы не проиграть уровень, собирайте воду по карте. <br><br> Управление по клавишам WASD. (Нужно их долго зажимать и резко отпускать)</p>
+            <button href="#" class="welcome-btn">Начать игру</button>
+        </div>
+    </div>
     <div class="levels">
         <div class="levels-content">
             <h2>Выберите уровень</h2>
@@ -43,7 +50,14 @@
     
 
     
-        
+        <script>
+            
+            const welcomeBtn = document.querySelector('.welcome-btn');
+            const welcome = document.querySelector('.welcome');
+            welcomeBtn.addEventListener('click', (e)=>{
+                welcome.classList.add('is-hide');
+            });
+        </script>
     
 
 </body>
