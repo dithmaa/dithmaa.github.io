@@ -172,6 +172,9 @@ function thirstDecrease(){
     }
 }
 // createEnemy();
+for(var i = 0; i <= 10; i++){
+    console.log(i);
+}
 
 
 
@@ -189,7 +192,7 @@ function createEnemy(){
     enemyPicture.append(enemyImg);
     enemy.append(enemyPicture);
     box.append(enemy);
-    randomEnemy();
+    // randomEnemy();
     return "Читы включены";
 
   
