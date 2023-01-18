@@ -75,3 +75,9 @@ body{
   border-radius: 15px;
   /* font-weight: bold; */
 }
+
+@media screen and (max-width: 768px) {
+  .res {
+    transform: translateY(412px);
+  }
+}
