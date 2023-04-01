@@ -1,0 +1,426 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.147.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.147.0/examples/jsm/",
+        "mindar-image-three":"https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-three.prod.js",
+        "gltf-loader":"./GLTFLoader.js",
+        "ambient-light":"./src/lights/AmbientLight.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { MindARThree } from 'mindar-image-three';
+    import { GLTFLoader } from 'gltf-loader';
+    const mindarThree = new MindARThree({
+      container: document.querySelector("#container"),
+      imageTargetSrc: "./targets.mind"
+    });
+    const { renderer, scene, camera } = mindarThree;
+    const anchor = mindarThree.addAnchor(0);
+    const gltfLoader = new GLTFLoader();
+    const ambientLight = new THREE.AmbientLight(0x404040); // soft white light
+    ambientLight.intensity = 4;
+    anchor.group.add(ambientLight);
+
+
+
+    let mixer;
+    let obj = null;
+
+    gltfLoader.load('./spider/scene.gltf', (gltfScene) => {
+     
+
+
+      obj = gltfScene.scene;
+
+      
+
+      
+
+
+      gltfScene.scene.rotation.x += -30.0;
+      gltfScene.scene.rotation.y += -55.0;
+      gltfScene.scene.scale.set(0.5, 0.5, 0.5);
+
+      animateButton.addEventListener("click", ()=>{
+      idleAction.play();
+      idleAction2.play();
+      });
+
+      stopAnimateButton.addEventListener("click", ()=>{
+      idleAction.stop();
+      idleAction2.stop();
+      });
+
+      jumpButton.addEventListener("click", () => {
+        gltfScene.scene.position.z += 0.02; //6
+        setTimeout(() => {
+          gltfScene.scene.position.z += 0.02; //1
+          setTimeout(() => {
+            gltfScene.scene.position.z += 0.02; //2
+            setTimeout(() => {
+              gltfScene.scene.position.z += 0.02; //3
+              setTimeout(() => {
+                gltfScene.scene.position.z += 0.02; //4
+                setTimeout(() => {
+                  gltfScene.scene.position.z += 0.02; //5
+                  
+                    setTimeout(() => {
+                      gltfScene.scene.position.z -= 0.03;
+                      setTimeout(() => {
+                        gltfScene.scene.position.z -= 0.03;
+                        setTimeout(() => {
+                          gltfScene.scene.position.z -= 0.03;
+                          setTimeout(() => {
+                            gltfScene.scene.position.z -= 0.03;
+
+
+                          }, 15)
+                        }, 15)
+                      }, 15)
+                    }, 15)
+                  }, 15)
+                
+              }, 15)
+            }, 15)
+          }, 15)
+        }, 15)
+      })
+
+      
+      superJumpButton.addEventListener("click", () => {
+        gltfScene.scene.position.z += 0.2; // 6
+        setTimeout(() => {
+          gltfScene.scene.position.z += 0.2; //1
+          setTimeout(() => {
+            gltfScene.scene.position.z += 0.2; // 2
+            setTimeout(() => {
+              gltfScene.scene.position.z += 0.2; // 3
+              setTimeout(() => {
+                gltfScene.scene.position.z += 0.2; // 4
+
+                setTimeout(() => {
+                  gltfScene.scene.position.z += 0.2; // 5
+
+                
+                    
+                    //down
+                    setTimeout(() => {
+                      gltfScene.scene.position.z -= 0.3; // 1
+                      setTimeout(() => {
+                        gltfScene.scene.position.z -= 0.3; // 2
+                        setTimeout(() => {
+                          gltfScene.scene.position.z -= 0.3; //3
+                          setTimeout(() => {
+                            gltfScene.scene.position.z -= 0.3; // 4
+                          }, 20)
+                        }, 20)
+                      }, 20)
+                    }, 20)
+                    //down end
+
+                  
+                }, 20)
+              }, 20)
+
+            }, 20)
+          }, 20)
+        }, 20)
+      });
+
+      
+      runButton.addEventListener('click', ()=>{
+        gltfScene.scene.position.x += 0.2;
+        
+        setTimeout(()=>{
+          gltfScene.scene.position.x += 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x += 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x += 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x += 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x += 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          setTimeout(()=>{
+          gltfScene.scene.position.x -= 0.2;
+          
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+        }, 20)
+      })
+      
+
+      // function animateDino() {
+      //   requestAnimationFrame(animateDino);
+      //   if(obj)
+      //     obj.scene.rotation.y += 0.03;
+        
+      //   anchor.group.add(obj.scene);
+          
+      // }
+      // animateDino();
+      anchor.group.add(obj);
+
+      const clips = gltfScene.animations;
+      mixer = new THREE.AnimationMixer(obj);
+      const idleClip = THREE.AnimationClip.findByName(clips, "Walkcycle_Animation");
+      const idleClip2 = THREE.AnimationClip.findByName(clips, "Default Take");
+      console.log(idleClip);
+      console.log(idleClip2);
+      const idleAction = mixer.clipAction(idleClip);
+      const idleAction2 = mixer.clipAction(idleClip2);
+      // idleAction.play();
+      
+    });
+    const clock = new THREE.Clock();
+    function animate() {
+      if (mixer) 
+        mixer.update(clock.getDelta());
+      renderer.render(scene, camera);
+    }
+    
+
+
+    const start = async () => {
+      await mindarThree.start();
+      renderer.setAnimationLoop(() => {
+        animate();
+      });
+    }
+    const startButton = document.querySelector("#startButton");
+    const jumpButton = document.querySelector("#jumpButton");
+    const superJumpButton = document.querySelector("#superJumpButton");
+    const runButton = document.querySelector("#runButton");
+    const animateButton = document.querySelector("#animateButton");
+    const stopAnimateButton = document.querySelector("#stopAnimateButton");
+
+    start();
+    startButton.addEventListener("click", () => {
+      start();
+    });
+    
+    stopButton.addEventListener("click", () => {
+      mindarThree.stop();
+      mindarThree.renderer.setAnimationLoop(null);
+    });
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: serif;
+    }
+
+    #container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #control {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .youtube-btn {
+      width: 70px;
+      height: 40px;
+      border-radius: 10px;
+      border: none;
+
+    }
+    .youtube-btn img {
+      width: 30px;
+    }
+    #control {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    #control button {
+      margin: 0 3px;
+    }
+    .plaque {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.473);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: none;
+    }
+    .plaque.is-open {
+      display: flex;
+    }
+    .plaque__more {
+      margin-top: 20px;
+      border: none;
+      padding: 12px 20px;
+      background-color: #31d385;
+      font-weight: bold;
+      color: #fff;
+      font-size: 24px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: .25s ease all;
+    }
+    .plaque__more:hover {
+      opacity: 0.6;
+    }
+    .plaque__close, .plaque__info_close {
+      background-color: transparent;
+      border: none;
+      filter: invert(1);
+      margin-bottom: 30px;
+    }
+    .plaque__close img, .plaque__info_close img {
+      width: 20px;
+    }
+    .plaque__info_close {
+      margin-bottom: 0;
+      margin-top: 32px;
+    }
+    .plaque__info {
+      font-size: 20px;
+      color: #fff;
+      background-color: rgb(40 40 40);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: scroll;
+      display: none;
+    }
+    .plaque__info.is-open {
+      display: flex;
+    }
+    .plaque__info p {
+      max-width: 70%;
+      line-height: 1.7;
+    }
+    #control {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: 30px;
+      justify-content: center;
+    }
+    @media screen and (max-width: 596px) {
+      .plaque iframe {
+        max-width: 80%;
+      }
+      #control {
+        flex-wrap: wrap;
+      }
+      #control button {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="control">
+    <button id="startButton" style="opacity: 0.4; display: none;" disabled>Start</button>
+    <button id="stopButton" style="opacity: 0.4; display: none;" disabled>Stop</button>
+    <button id="jumpButton" style="opacity: 0.4; display: none;">Jump</button>
+    <button id="superJumpButton" style="opacity: 0.4; display: none;">Super Jump</button>
+    <button id="runButton" style="opacity: 0.4; display: none;">Run</button>
+    <button id="animateButton" style="font-size: 52px; background-color: aquamarine; padding: 9px 24px; border: none; border-radius: 20px; ">Animate it</button>
+    <button id="stopAnimateButton" style="font-size: 52px; background-color: red; padding: 9px 24px; border: none; border-radius: 20px; color: white;">Animation Stop</button>
+    <button id="openYoutube" class="youtube-btn"><img src="./youtube-logo.png" alt="Youtube" ></button>
+  </div>
+  <div class="plaque">
+    <div class="plaque__info">
+      <button class="plaque__info_close">
+        <img src="./close.png" alt="close">
+      </button>
+      <h2>Tyrannosaurus</h2>
+      <p>
+        
+        Tyrannosaurus[nb 1] is a genus of large theropod dinosaur. The species Tyrannosaurus rex (rex meaning "king" in Latin), often called T. rex or colloquially T-Rex, is one of the best represented theropods. It lived throughout what is now western North America, on what was then an island continent known as Laramidia. Tyrannosaurus had a much wider range than other tyrannosaurids. Fossils are found in a variety of rock formations dating to the Maastrichtian age of the Upper Cretaceous period, 68 to 66 million years ago. It was the last known member of the tyrannosaurids and among the last non-avian dinosaurs to exist before the Cretaceous–Paleogene extinction event.
+
+Like other tyrannosaurids, Tyrannosaurus was a bipedal carnivore with a massive skull balanced by a long, heavy tail. Relative to its large and powerful hind limbs, the forelimbs of Tyrannosaurus were short but unusually powerful for their size, and they had two clawed digits. The most complete specimen measures up to 12.3–12.4 m (40.4–40.7 ft) in length; however, according to most modern estimates, T. rex could grow to lengths of over 12.4 m (40.7 ft), up to 3.66–3.96 m (12–13 ft) tall at the hips, and 8.87 metric tons (9.78 short tons) in body mass. Although other theropods rivaled or exceeded Tyrannosaurus rex in size, it is still among the largest known land predators and is estimated to have exerted the strongest bite force among all terrestrial animals. By far the largest carnivore in its environment, Tyrannosaurus rex was most likely an apex predator, preying upon hadrosaurs, juvenile armored herbivores like ceratopsians and ankylosaurs, and possibly sauropods. Some experts have suggested the dinosaur was primarily a scavenger. The question of whether Tyrannosaurus was an apex predator or a pure scavenger was among the longest debates in paleontology. Most paleontologists today accept that Tyrannosaurus was both an active predator and a scavenger.
+
+Specimens of Tyrannosaurus rex include some that are nearly complete skeletons. Soft tissue and proteins have been reported in at least one of these specimens. The abundance of fossil material has allowed significant research into many aspects of its biology, including its life history and biomechanics. The feeding habits, physiology, and potential speed of Tyrannosaurus rex are a few subjects of debate. Its taxonomy is also controversial, as some scientists consider Tarbosaurus bataar from Asia to be a second Tyrannosaurus species, while others maintain Tarbosaurus is a separate genus. Several other genera of North American tyrannosaurids have also been synonymized with Tyrannosaurus.
+
+As the archetypal theropod, Tyrannosaurus has been one of the best-known dinosaurs since the early 20th century and has been featured in film, advertising, postal stamps, and many other media.
+      </p>
+    </div>
+    <button class="plaque__close">
+      <img src="./close.png" alt="close">
+    </button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/qj4p8ekD0m0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <button class="plaque__more">
+      About Dino
+    </button>
+  </div>
+  <div id="container">
+  </div>
+  <script>
+    let openYoutubeBtn = document.querySelector('#openYoutube');
+    let openDinoInfoBtn = document.querySelector('.plaque__more');
+    let plaqueInfo = document.querySelector('.plaque__info');
+    let plaque = document.querySelector('.plaque');
+    let plaqueInfoClose = document.querySelector('.plaque__info_close');
+    let plaqueClose = document.querySelector('.plaque__close');
+
+    openYoutubeBtn.addEventListener('click', ()=>{
+      plaque.classList.add('is-open');
+    });
+    openDinoInfoBtn.addEventListener('click', ()=>{
+      plaqueInfo.classList.add('is-open');
+    });
+    plaqueInfoClose.addEventListener('click', ()=>{
+      plaqueInfo.classList.remove('is-open');
+    });
+    plaqueClose.addEventListener('click', ()=>{
+      plaque.classList.remove('is-open');
+    });
+    
+  </script>
+</body>
+
+</html>
